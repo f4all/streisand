@@ -1,0 +1,150 @@
+<html lang="en" dir="ltr"> 
+<header>
+<meta charset="utf-8">
+<title>So we herd u liek logz | Telecomix</title>
+<link href='css/normalize.css' rel='stylesheet'type='text/css' />
+<style type="text/css">
+body {
+    background-color: #444444;
+}
+
+div#content {
+   background-color: black;
+   color: #DDDDDD;
+   padding: .5em 2em 1em 2em;
+   margin: 1em 2em 2em 2em;
+   border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+   color: #4DAFDA;
+}
+
+a:visited {
+   color: #1986b5;
+}
+
+a:link {
+   color: #73BBDA;
+}
+
+div#content p {
+    max-width: 940px;
+}
+
+h2 {
+    background: #444444;
+    padding: .2em;
+    max-width: 940px;
+    border-radius: 2px;
+}
+
+#pics {
+    width: 100%;
+}
+
+#ihatecss {
+    width: 100%;
+}
+
+#webchat {
+    display: inline;
+    width: 600px;
+}
+
+div.twtr-widget {
+   display:inline-block;
+   padding-left: 1em;
+   padding-right: 0em;
+   margin-top: .8em;
+}
+
+div.twtr-doc {
+   float:left;
+   padding: 0.2em 1em 0.2em 1em;
+}
+
+</style>
+</header>
+<body>
+<div id="content">
+<H1><a href="index.html">Project Bluesmote</a></H1>
+<a href="http://yro.slashdot.org/story/11/10/05/1249209/telecomix-releases-54gb-of-syrian-censorship-logs"><img src="pics/liek_logz.jpg" /></a>
+<p>tl;dr - analyze & visualize <a href="http://www.youtube.com/watch?v=I7GhNK6K8fQ">Blue Coat censorship logs from Syria</a></p>
+
+<H2><em><a href="http://www.youtube.com/watch?v=I7GhNK6K8fQ">VIDEO (5 MiN)</a></em></H2>
+<p>A short video. This would be a good place to start.</p>
+
+<h2>About these logs...</h2>
+<p>This data was recovered from public FTP servers in Syria over a period of six weeks in late 2011. The logs are from <a href="http://bluecoat.com/">Blue Coat</a> SG-9000 filtering proxies (aka "deep packet inspection") installed by Syrian ISPs and used to censor and surveil the Internet. Individual log lines are data about HTTP request/response from web browsers.</p>
+
+<p>The logs were eventually leaked, with client IP redacted. The data is now <a href="http://en.wikipedia.org/wiki/Public_domain">public domain</a>.</p>
+
+
+<p>The data set is ~55GB in total compressed, and almost 1/2 TB uncompressed. That's a whole lotta lines. They provide unique, first hand evidence of what censorship looks like from the censor's perspective.</p>
+
+<H3>Data Sets</H3>
+<p>Mirrored from <a href="http://sec.tl/syrian-censorship-logs/">http://sec.tl/syrian-censorship-logs/</a> at 2011-12-12 06:44 Two versions of the same data. Blocks are easier to work with.</p>
+<p><strong>Blocks</strong>: are a series of tab-separated lines, with several <a href="https://github.com/wearpants/bluesmote/blob/master/bluesmote/record.py#L4">columns</a>. Each file is gzipped &amp; about ~10MB. They are numbered like <em>block-0000.log.gz</em> up to 5274. The fields are described here. Unparseable lines removed, etc..</p>
+<p><strong>Raw logs</strong>: are the original, unaltered mirror of the leaked logs. </p>
+
+<p><em>no there are no versions with the client IP intact, please stop asking.</em></p>
+<H2><blink><font color="red">WARNING</font></blink></H2>
+<p>This mirror is hosted on <a href="http://aws.amazon.com/">Amazon Web Services</a>. You can be certain that they keep logs too.</p>
+
+<H2>Download</H2>
+<H3>PLEASE <a href="#torrents">USE BITTORRENT</a> THIS THING CO$T MONEY$</H3>
+<p>kthx. If you have never used bittorrent (wat), <a href="http://www.utorrent.com/">μTorrent</a> is a simple client.</p>
+
+<H3>Amazon S3 & AWS</H3>
+<p>Bandwidth is free inside AWS <code>s3://project-bluesmote/v1/blocks/</code></p>
+
+<H3><a href="http://project-bluesmote.s3-website-us-east-1.amazonaws.com/v1/blocks/">Blocks - HTTP</a></H3>
+
+Individual block files, about 10 MB each. Handy to grab a random few for testing. If you want a larger amount, use these <a href="#torrents">torrents</a>.</p>
+
+<H3><a href="http://project-bluesmote.s3-website-us-east-1.amazonaws.com/raw_logs/">Raw Logs - HTTP</a></H3>
+<p>Mirror of the original raw logs, as individual files. If you want the whole set, please use the <a href="bt/bluesmote-raw_logs.html">torrent</a>.</p>
+<H4 id="torrents"><a href="torrent/index.html">Torrents</a></H4>
+<p>Each block torrent is </p>
+<ol>
+<li><a href="torrent/bluesmote-v1-blocks-0.torrent">Blocks Torrent 0</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-1.torrent">Blocks Torrent 1</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-2.torrent">Blocks Torrent 2</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-3.torrent">Blocks Torrent 3</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-4.torrent">Blocks Torrent 4</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-5.torrent">Blocks Torrent 5</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-6.torrent">Blocks Torrent 6</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-7.torrent">Blocks Torrent 7</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-8.torrent">Blocks Torrent 8</a> - <em>5.5GB</em></li>
+<li><a href="torrent/bluesmote-v1-blocks-9.torrent">Blocks Torrent 9</a> - <em>5.5GB</em></li>
+<li><a href="bt/bluesmote-raw_logs.html">Raw Logs Torrent</a> - <em>54GB</em></li>
+</ol>
+
+<H2>Code &amp; Results</H2>
+<p>COMING SOON</p>
+<p>Github: <a href="https://github.com/wearpants/bluesmote"<a>https://github.com/wearpants/bluesmote</a></p>
+
+<H2><a href="http://werebuild.eu/wiki/Project_Bluesmote">Cluster</a></H2>
+<p>IRC: #bluesmote on <a href="irc://irc.telecomix.org">irc.telecomix.org</a> or use webchat. Tweet <a href="http://twitter.com/telecomix">@telecomix</a> with <a href="http://topsy.com/s?q=bluesmote">#bluesmote</a>.</p>
+<H2><a href="http://www.wolframalpha.com/input/?i=cute+cats">Kittehs!</a></H2>
+<p>We like <a href="http://www.wolframalpha.com/input/?i=cute+cats">cute cats</a>.</p>
+
+<div id="pics">
+<a href="http://telecomix.org/"><img src="pics/ciphercat.jpg" height="250px"/></a>
+<a href="http://tcxsyria.ceops.eu/"><img src="pics/tcxsyria.jpg" height="250px"/></a>
+<a href="http://streisand.me/"><img src="pics/streisandpuppets.jpg" height="250px"/></a>
+<a href="http://kopimi.com/"><img src="pics/kopimi_amerika_america_us_u.gif" height="250px"/></a>
+<a href="http://datalove.me/"><img src="pics/datalove.svg" width="50%"/></a>
+</div>
+<p><a href="http://telecomix.org/">The Telecomix Network</a> | No copyright | Please copy us and make datalove</p>
+</div>
+</body>
+
+<!-- Mirrored from bluesmote.com/ by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 12 May 2014 21:40:49 GMT -->
+</html>
+
