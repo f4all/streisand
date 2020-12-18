@@ -1,0 +1,383 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('/fonts/BebasNeue-webfont.eot');
+    src: url('/fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/BebasNeue-webfont.woff') format('woff'),
+         url('/fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-input-placeholder {
+    color:    #777;
+}
+:-moz-placeholder {
+    color:    #777;
+}
+
+/*match placeholder/watermark padding to border+padding for input element*/
+label.placeholder {
+cursor: text;
+padding: 4px 4px 4px 4px;
+color: #999999;
+float: left;
+}
+
+body {
+	background: #f7f7f7 url(/images/broadside-bg.jpg) top center no-repeat;
+}
+
+body#thanks {
+	background: #f7f7f7 url(/images/broadside-thanks-bg.jpg) top center no-repeat;
+}
+
+a {
+	color: #C83F3D;
+	text-decoration: underline;
+}
+
+a.modal-trigger {
+	cursor: pointer;
+}
+
+p, h1, h2, td {
+	color: #000;
+}
+
+#share-banner {
+	width: 100px;
+	height: 248px;
+	background: transparent url(/images/share-banner.png) top left no-repeat;
+	position: absolute;
+	margin-left: 890px;
+}
+
+#share-banner > ul {
+	margin: 40px 0 0 20px;
+	padding: 0;
+}
+
+#share-banner > ul > li {
+	width: 50px;
+	list-style-type: none;
+	margin: 0 0 7px 0;
+	padding: 0;
+}
+
+#share-banner > ul > li > a {
+	display: block;
+	width: 35px;
+	height: 35px;
+	background: url(/images/share-sprite.png) top left no-repeat;
+}
+
+#share-banner > ul > li > a > span {
+	display: none;
+}
+
+#share-banner > ul > li.facebook > a {
+
+}
+
+#share-banner > ul > li.twitter > a {
+	background-position: 0 -36px;
+}
+
+#share-banner > ul > li.tumblr > a {
+	background-position: 0 -72px;
+}
+
+#share-banner > ul > li.google > a {
+	background-position: 0 -108px;
+}
+
+header > h1 {
+	font-family: BebasNeueRegular, sans-serif;
+	font-size: 125px;
+	text-align: center;
+	line-height: 125px;
+	height: 90px;
+	width: 391px;
+	background: transparent url(/images/victory-header.png) top center no-repeat;
+	color: #000;
+	margin: 42px auto 20px auto;
+}
+
+header > h1 > span {
+	display: none;
+}
+
+section.item hr, #help-out hr, header > hr, #call-to-action hr, #strike-data hr, footer hr {
+	border: 0;
+	background: url(/images/broken-line.png) top left no-repeat;
+	width: 792px;
+	height: 2px;
+	margin: 0 auto 15px auto;
+}
+
+header > p {
+	font-family: BebasNeueRegular, sans-serif;
+	font-size: 30px;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto 25px auto;
+	line-height: 40px;
+	color: #000;
+}
+
+header > p > strong {
+	font-weight: normal;
+	color: #8f2929;
+}
+
+#thanks header > p {
+	width: 90%;
+}
+
+#call-to-action {
+	height: 195px;
+	padding-top: 20px;
+	background: url(/images/form_background.png) no-repeat;
+}
+
+#help-out p, #call-to-action p, #strike-data p {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	width: 90%;
+	text-align: center;
+	margin: 0 auto 30px auto;
+	line-height: 30px;
+	color: #000;
+}
+
+#call-to-action p {
+	margin-bottom: 5px;
+	text-align: left;
+	width: 875px;
+}
+
+#request-blackout, #my-blackout {
+	margin:0 0 45px 28px;
+	background: #333;
+	padding: 15px 0 15px 0;
+	width: 880px;
+	box-shadow: 0 2px 5px #666;
+}
+
+#request-blackout {
+	margin-bottom: 20px;
+}
+
+#my-blackout {
+	margin-bottom: 15px;
+}
+
+#request-blackout > input#firstname {
+	margin-left: 30px;
+}
+
+#my-blackout > input#nametwo {
+	margin-left: 30px;
+}
+
+#request-blackout > input, #my-blackout > input {
+	height: 38px;
+	padding: 0 0 0 5px;
+	font-size: 18px;
+}
+
+#call-to-action > p.babas {
+	font-family: BebasNeueRegular, sans-serif;
+	font-size: 32px;
+	width: 95%;
+	margin: 30px auto 20px auto;
+	line-height: 42px;
+	color: #222;
+	text-align: center;
+}
+
+#call-to-action > p.babas > a {
+	text-decoration: none;
+}
+
+#call-to-action > p.babas > a:hover {
+	color: #333;
+}
+
+#call-to-action > p.babas > a > span {
+	text-decoration: underline;
+	color: #000;
+}
+
+#call-to-action > p.babas > a:hover > span {
+	color: red;
+}
+
+#call-to-action p.disclosure {
+	color: #999;
+	font-size: 12px;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#help-out {
+
+}
+
+#help-out ol li {
+   color: #000;
+   padding: 8px;
+   line-height: 18px;
+}
+
+#help-out p, #strike-data p {
+	width: 79%;
+}
+
+footer h2, section.item h2, #help-out h2, #strike-data h2 {
+	font-size: 24px;
+	font-weight: normal;
+	font-family: BebasNeueRegular, sans-serif;
+}
+
+#strike-data ul {
+	margin-top: 15px;
+}
+
+#full-list ul > li, #strike-data ul > li {
+	font-size: 18px;
+	margin:0 15px 15px 0;
+	float: left;
+	width: 140px;
+	text-overflow: ellipsis;
+	padding: 0;
+	list-style-type: none;
+}
+
+#strike-data ul > li, #full-list ul > li a, #strike-data ul > li a {
+   font-size: 12px;
+   font-family: arial, sans-serif;
+   color: #000;
+   text-decoration: underline;
+}
+
+section.item h2, #strike-data hr, #help-out hr {
+	width: 100%;
+}
+
+#strike-data table > thead {
+	font-family: BebasNeueRegular, sans-serif;
+	font-size: 18px;
+}
+
+footer {
+	font-family: Georgia, serif;
+}
+
+footer hr {
+	border: 0;
+	background: url(/images/broken-line-wide.png) top left no-repeat;
+	width: 939px;
+	height: 2px;
+	margin: 0 auto 20px auto;
+}
+
+/* Thanks */
+
+#thanks header > h1 {
+	font-family: BebasNeueRegular, sans-serif;
+	font-size: 125px;
+	text-align: center;
+	line-height: 125px;
+	height: 90px;
+	width: 416px;
+	background: transparent url(/images/thank-you-header.png) top center no-repeat;
+	color: #000;
+	margin: 42px auto 20px auto;
+}
+
+#thanks header > h1 > span {
+	display: none;
+}
+
+#share-this > ul {
+	width: 590px;
+	margin: 0 auto 0 auto;
+}
+
+#share-this > ul > li {
+	list-style-type: none;
+	float: left;
+}
+
+#share-this > ul > li.twitter {
+	width: 120px;
+}
+
+#share-this > ul > li.facebook {
+	width: 470px;
+}
+
+ul li a {
+	text-decoration: none; font-size: 20px;
+}
+
+ul#tools-list li {
+	padding: 3px;
+}
+
+ul#tools-list li a {
+	text-decoration: underline; font-size: inherit;
+}
+
+#strike-data .twitterz p {
+	font-size: 12px;
+	line-height: 1.5;
+	text-align: left;
+	font-family: verdana, sans-serif;
+}
+
+#full-list ul.supporting-sites > li  {width: 190px; overflow: hidden; color: #000; white-space: nowrap;}
+
+
+
+.zomg {
+	-moz-box-shadow:inset 0px 1px 0px 0px #d4ebef;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d4ebef;
+	box-shadow:inset 0px 1px 0px 0px #d4ebef;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d4d4d4), color-stop(1, #b2b2b2) );
+	background:-moz-linear-gradient( center top, #d4d4d4 5%, #b2b2b2 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4d4d4', endColorstr='#b2b2b2');
+	background-color:#FFFFFF;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #50728d;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:7px 5px 7px 5px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #333;
+	display: block;
+	clear: both;
+	margin: 0 auto 10px auto;
+	cursor: pointer;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.zomg:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b2b2b2), color-stop(1, #d4d4d4) );
+	background:-moz-linear-gradient( center top, #b2b2b2 5%, #d4d4d4 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b2b2b2', endColorstr='#d4d4d4');
+	background-color:#b2b2b2;
+}
+
+.zomg:active {
+	position:relative;
+	top:1px;
+}
