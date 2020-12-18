@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/basics.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:38 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>IRC Basics</title>
+	<meta name="description" content="Basic Guide Connecting to IRC" />
+	<meta name="keywords" content="anonops irc, anonops, join, anonymous, ops, operations, newblood, basic, irc, noob, webchat, guide" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<script type="text/javascript">
+    var _bftn_options = {
+      animation: 'banner',
+      position: 'topright',
+      theme: 'dark'
+    }
+</script>
+<script src="http://widget.battleforthenet.com/widget.min.js" async></script>
+   </head>
+
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570" />
+<h1>Connect to IRC</h1>
+</div>
+<div class="dividertwo"></div>
+
+Now onto actually using IRC.<br />
+A lot of this stuff is just extra info. You don't need to know it. We don't need to know it. We just love typing out this crap.<br />
+You are smart, you already know all this. No need to read it.<br /><br />
+OK now that was sarcasm. IRC is full of it so get used to it. You really do need to know this stuff.<br />
+If you thought it was rude of me to be sarcastic, you wont survive on IRC very long.
+<div class="dividerthree"></div> 
+
+<h3>Getting Started</h3>
+First up, pick a nick.<br />
+A nickname, commonly referred to as 'nick', is your IRC name. Yours will appear before all of your messages in IRC to identify who is talking.<br />
+If another user types your nick, the text is printed in red. This is a highlight. Some clients also will flash the window, send a beep, etc.<br />
+You can select almost any nickname you like, provided nobody else uses it.<br />
+The [ ] in the command indicate where to place your own choices. Do not include the [ ] themselves.<br /><br />
+If you choose a nick like 'justinbieber' or 'Ims0l33t4ndc00l', prepare to be ridiculed. Seriously. 
+<div class="dividerthree"></div>
+
+<h3>Connect to IRC</h3>
+The easiest way to reach the IRC for new users is to use webchat. AnonOps provides an SSL encrypted web interface for this purpose.<br />
+When you click the link a new page will open. On that page you will enter your chosen nick and for a channel name enter <strong>#Opnewblood</strong><br />
+Before you click to join, we suggest you finish reading this page at least once before joining. This will save you alot of questions.<br /><br />
+If you are ready then click to join the <a href="https://webchat.anonops.com/" target="_blank">AnonOps Webchat</a><br />
+After connecting, if you see a message about the nick belonging to another user, you will need to change yours.
+<div class="dividerthree"></div>
+
+<h4>To change your nick use:</h4>
+<strong>/nick [your nick here]</strong> remember do not include the [ ]<br />
+Example- <em>/nick mynewnick</em>
+<div class="dividerthree"></div>
+
+<h3>Registering Your Nick</h3>
+Registering is how you create an account on the AnonOps network; your nickname belongs you and nobody else can use it. There are other benefits, of course, including the ability to be recognised and given admin capabilities in channels, to make new channels, etc. All nick functions are controlled by NickServ. 
+<div class="dividertwo"></div>
+<h4>To register your current nick, use:</h4>
+<strong>/msg nickserv register [password] [fake email]</strong><br />
+Example- <em>/msg nickserv register mysecretpaassword <!--email_off-->fake@email.com<!--/email_off--></em>
+<div class="dividertwo"></div>
+Please note if you lose your password, you will not be able to recover your nick and will have to make a new one.
+<div class="dividerthree"></div>
+
+<h3>Navigating IRC</h3>
+You will need to log in to your nick every time you connect to the network. This is called <em>identifying</em>. You identify to your account using NickServ.<br />
+<div class="dividertwo"></div>
+<strong>/msg nickserv identify [your password]</strong><br />
+Example- <em>/msg nickserv identify mysecretpassword</em><br />
+<div class="dividerthree"></div>
+
+<h3>Channels</h3>
+IRC networks have channels. A user can be in many channels at the same time. They are able to switch between channels and converse with users in each.<br />
+Networks can have 100s even 1000s of channels although most enforce a limit as to how many one user can join.<br />
+The #opnewblood channel is good for orientation. It is the help channel for new users. Ask any questions you have there and you'll get answers, or at least pointed in the right direction.<br />
+They can assist you in setting up and securing your client, securing your connection and making you safe as possible online.
+That channel is manned by volunteers and network staff.<br />
+There is also an infobot who will respond to your commands and provide more in-depth information directly to you. His name is <strong>Infobot</strong>.
+<div class="dividertwo"></div>
+
+<h4>Joining channels</h4>
+<strong>/join [#channel name]</strong><br />
+Example- <em>/join #anonops</em><br />
+This will join you to the main network channel. Say 'hi' then just observe a bit until you get a feel for it.<br />
+<div class="dividertwo"></div>
+
+<h4>Finding a channel</h4>
+Most users come to AnonOpsIRC for a specific purpose or interest. Those 'ops' you are looking for usually have their own channel. To find them, we use the <em>/list</em> function.<br />
+Issuing the <em>/list</em> will send the entire network channel list to you showing the channel name and the topic for each. This is a very long list.
+<div class="dividertwo"></div>
+Luckily the list command takes arguments to fine tune your search.
+<p><strong>/list #op*</strong><br />
+This command will show you a list of all channels that start with 'op'. This list is sent to the 'status' tab.</p>
+<div class="dividertwo"></div>
+<p><strong>/list >20</strong> will send a list of all channels with more than 20 users.<br />
+A little practice with this command should let you find the channel you seek. If this fails, ask in <strong>#anonops</strong>.</p>
+<div class="dividerthree"></div>
+<h2>Advanced IRC Commands<a id="adv"></a></h2>
+<div class="dividerthree"></div>
+<h3>Commands<a id="airc"></a></h3>
+1)<b>/join</b><br />Self explanatory, this is used to join a channel, to join #opnewblood , you would type <i>/join #opnewblood</i><br /><b>2) /me</b><br />Not really as necessary, but used sometimes. for instance if you wanted to wave at someone, you would type <i>/me waves </i>it would appear as "anon waves"<br /><b>3) /msg</b><br />if you want to have a conversation with a specific person outside of the channel the best thing to do is message them, just type <i>/msg username message here.  </i>just make sure to use a space between their name and the message.<br /><b>4) /query</b><br />Same thing as msg, except this will open up a new window for you to have a conversation with this person.<br /><b>5) /nick</b><br />This command will change your nickname for instance if you wanted to be called gigapuddi you'd type <i>/nick gigapuddi. </i>Remember though if you do this you won't be registered unless you re-register with nickserv (see the walkthrough to anon if you dont know what nickserv is, or want help with it)<br /><b>6) /quit</b><br />This will let you quit.<br /><b>7) /ignore</b><br />Trolls are plenty, and it's best not to feed them, and just ignore them. To ignore someone type <i>/ignore username</i><br /><b>8) /whois</b><br />This will display information about the person you selected, such as their vhost, what channels they're in ect. to find a whois just type <i>/whois username</i><br /><b>9) /away</b><br />To mark yourself away, you can use this, if you were persay making a sandwich, you could do <i>/away making sammiches </i>and people will know you're making sandwiches.<br /><b>10) /ping</b><br />This is to see the latency to the server, if you're lagging this might give you more information, to ping a server just type /ping ipadresshere<br /><b>11) /notify on/off</b><br />This will change if you get a notification (a beep sound) whenever someone types your name. to turn off /notify off to turn on do <i>/notify on</i><br /><b>12) /topic</b><br />If you want to see a topic in a certain channel just type /topic and it will read it out to you.<br /><b>13) /list</b><br />Lists the channels that are available to you.
+<div class="dividerthree"></div>
+
+<h3>Browsing IRC<a id="abr"></a></h3>
+<div class="dividerthree"></div>
+<h4>NickServ</h4>
+When you arrive on the IRC for the first time, you will be using an unregistered nickname. If you plan on becoming a regular user, it is vital to register your nick. This is important for several reasons:<br /><ul><li>It ensures that nobody can impersonate you.</li><li>It grants you various abilities which non registered users do not have</li><li>(Most importantly) It allows you to use a vhost - this hides your location and ISP information from other users.</li></ul>
+To register your nickname, refer to the IRC guide for your operating system on the original #OpNewblood page.<br />
+When you connect to the server, type /msg nickserv IDENTIFY password<br />This will tell nickserv that you are the real owner of your nickname. If you do not do this, you will not have access to registered-only chans or your vhost. For safety reasons, it is recommended that you type the command in your status window so, in the event of an error on your part, you do not post your password to an entire channel.
+<div class="dividerthree"></div>
+<h4>Groups</h4>
+If you plan to use more than one nickname, you can group them together. This has several uses, the main ones being to tell people where you are connecting from, or that you are away.For example: a user called "JohnDoe" might be going out for a while but leaving his laptop on, in which case he could change his nick to JohnDoe|Away or JohnDoe|AFK to let other users know he was away.
+This is important so as, for example, people will know why you are not replying to messages. He might also use the nick JohnDoe|Mobile to let people know he is on a mobile client, and therefore cannot use certain functions such as possibly receiving PMs or visiting links people might send him.To change your nick, type /nick newnick.
+However, when you do this, you will lose any access levels, vhost, and other settings associated with your nick.To avoid this, when you choose your new nickname, switch to it using /nick, then type /msg nickserv GROUP nick password - where nick and password are your MAIN nick and its password. This ensures that these nicks will share passwords and settings.
+<div class="dividerthree"></div>
+<h4>Ghosts</h4>
+Let's face it, sometimes shit happens. Sometimes your internet connection will randomly decide to die on you. Sometimes your laptop's battery might run out, sometimes your IRC client will crash, sometimes you might accidentally close a window. There are many reasons one might suddenly find themselves accidentally disconnected from the IRC.
+The problem is that unless someone signs off in "an orderly fashion", the server will not actually realize they are gone. Think of it like somebody who puts down a phone and walks away, but without hanging up the call. Or like when your computer crashes without shutting down the correct way. In these circumstances, the IRC server does not realize you're gone, and assumes your nick is still connected. This situation remains until the next time the IRC pings your nick and gets no response ('ping timeout'). This can take a while though, and very often the person who has disconnected, will manage to get themselves back online <i>before</i> the server has time to realize they ever left in the first place. When this happens, the user's nick is already in use, so the server will assign them a new one (usually just by adding a ` or _ to the end, so if JohnDoe tries to connect when there is already a JohnDoe connected, they will be signed on as JohnDoe_ or JohnDoe`.The problem with this, of course, is that just like an un-identified nick, these nicks have no modes, no vhosts, no access levels - because the "ghost" of the nick is still occupying them. To force the dead session to disconnect and replace its nick with yours, type /msg nickserv GHOST nickname password, where password is the pass to the original nick. This would, in this example, disconnect JohnDoe and change JohnDoe_ to JohnDoe automatically, identifying and setting up the nick as normal. When this happens, you will probably see something like this in the channel:JohnDoe left the chat room (GHOST command used by JohnDoe_)JohnDoe_ is now known as JohnDoeIt is very important to do this as quickly as possible when re-connecting, as you will be locked out of your vhost until you have done this.<br />
+<div class="dividerthree"></div>
+<h4>Vhosts</h4>
+Obviously one of the main priorities of any Anonymous is to be, well... <i>Anonymous</i>.<br />
+When you connect to our IRC server, the server will automatically mask your IP address (your computer's "phone number"). This is the most important layer of anonymity.We also have a vHostServ. It gives you a fake host name, which masks the cloaked IP. It can be anything you want - for instance, if anyone ever tries to check where I am connecting from, they will see "fuck.off.you.bollocks" instead. :DTo get a vHost, you must be registered and identified. This is why it is CRUCIAL that you identify ASAP when you connect, as your vHost will not be activated until you have done so.How to get a vHost :<br />1. Type /join #vhost in your IRC.<br />2. Once inside the vHost channel, type !vhost (insert.clever.name.here). <br />NOTE : You can, indeed, use whatever you want as a vhost - provided it is a valid one, i.e. no spaces, and must contain at least one dot. The most common way to do this therefore is.to.use.dots.as.spaces.in.your.vHost.When you have done this, vHostServ will automatically kick and ban you from the #vhost channel. This is normal and expected, and simply means the vHost as worked. You will be banned from the channel (#vhost) for a certain amount of time, after which you will be able to change your vHost if you like. Now that you have a vhost, you are fully set up to use the IRC, any other settings you may set on your nick are purely optional.*Note: If you join a #chan before you vHost, your new anonymized information will not automatically update in the channel. Be sure to exit and rejoin any channels you are connected to after you vHost, or your real connection information will still be viewable.**NOTE: If you use Xchat along with auto-join channels, you can tell xchat to wait longer before joining channels on server connect using the /set irc_join_delay X command, where X is the number of seconds xchat will wait before joining channels.  Setting this to something like 10 seconds helps if you're using automatic channels<br />
+<div class="dividerthree"></div>
+<h4>Invite-only channels (mode +i)</h4>
+Some channels, for various reasons, are invite-only. Commonly this is because the channel has a very specific purpose and only users who have a specific job in the channel can access it - for example, there are private channels for operators and hackers. Sometimes, a channel will also be set to +i if it is being invaded or flooded by bots or trolls.
+If a channel is +i, you will not be able to join it using /join. You will simply get an error message telling you that the channel is invite only. However, if you are an operator yourself, or are on the invite exception list, you can force the server to let you in.
+To do this, you send a message to another bot called ChanServ, which is not covered in this guide as in general only more advanced users will ever need to use it. However, to request an invite, type /msg chanserv INVITE #channel, where #channel is the channel you are trying to connect to. It is important to include the # at the start of the channel name, or ChanServ won't recognize it.<br />
+<br />If you are on the list, you will then gert a message asking you if you would like to join the channel. Otherwise, chanserv will tell you that you do not have permission.If you are NOT on the invite or operator list for a channel, but you feel you should be allowed in to it anyway, you can type /knock message, where message is your message to the channel admins. So for instance, if there was a channel called #brits only for British people, and you didn't have access, you could type /knock #brits Hey, I'm British, let me in!This will send a message to the channel admins, and cause your message to appear in the channel. The admins will then (if they decide to let you in), send you an invite just like chanserv does. You will receive the same message you would receive from chanserv asking you if you would like to join the channel.NOTE: Knocking on a channel 10 times in a row is not going to amuse anyone. In all likelihood, it will actually make it almost certain that you will NOT be invited into the channel. If you receive no invite it either means the admins are not active at that time, or have decided for whatever reason not to invite you. If it does happen, you could maybe try again later, but don't knock 10 times in one minute, this is more likely to get you banned.
+If no one replies to your knock, another option you have is to type /msg chanserv INFO #channel, where #channel is the name of the channel (again, include the # or chanserv will ignore your message). This will tell you what the channel is for, and who created it. You could then message the room founder and ask for access, but this is generally not recommended unless it is extremely urgent.
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+
+<h3>Being safe</h3>
+<p>The network admins work diligently to maintain security on the IRCs servers but they have no control over your client and what you do.<br />
+Information on those proceedures can be found on the <a href="https://anonops.com/security.html" target="_blank">AnonOps security</a> page.<br /><br />
+We strongly recommend you use the information on the newblood <a href="security.html" target="_blank">security</a> page and the help offered by the users in #opnewblood.</p>
+For more information on using services, click <a href="https://anonops.com/services.html" target="_blank">AnonOps Services</a><br />
+<div class="dividertwo"></div>
+
+	<div id="footer"><!--Footer Begins -->
+	<h2 class="center"><a href="index-2.html">Back to the OpNewblood main page</a></h2>
+	<div class="dividertwo"></div>
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/basics.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/basics.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:38 GMT -->
+</html>

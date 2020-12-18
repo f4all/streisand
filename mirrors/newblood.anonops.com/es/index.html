@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+   
+<!-- Mirrored from newblood.anonops.com/es/ by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:42:32 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>OpNewBlood Spanish</title>
+<meta name="description" content="OpNewBlood Index" />
+<meta name="keywords" content="anonops irc, anonops, join, anonymous, ops, operaciones, newblood, basico, irc, noob, webchat, seguridad, vpn, guias" />
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+
+<body>
+<div id="main">
+<div class="center">
+<img alt="" width="563" src="../images/big.png" height="570" />
+<h1> OpNewblood para chatear, Configuración del IRC y Anonimato </h1>
+                <div class="dividerthree"></div>
+                <a href="index.html"><img src="images/flagsp.png" alt="" width="22" height="15" /></a>
+				<a href="../nl/index.html"><img src="images/nlflag.png" alt="" width="22" height="15" /></a>
+				<a href="../fr/index.html"><img src="images/frflag.png" alt="" width="22" height="15" /></a>
+				<a href="../de/index.html"><img src="images/gerflag.png" alt="" width="22" height="15" /></a>
+                <div class="dividerthree"></div>
+            </div>
+<!--<pre> Este documento está aquí para darte la máscara, la capa y el sombrero. </pre>
+<pre> Si la tomas para asaltar el la embajada o salir a las calles, eso es cosa tuya. </pre> -->
+
+
+En primer lugar, la bienvenida al internet. Somos Anonymous , y hemos ganado popularidad y prensa con historias que van desde
+<a href="https://www.google.com/search?hl=en&amp;num=100&amp;ie=UTF-8&amp;tbo=1&amp;tbs=clue:1,prv:1&amp;q=anonymous">Wikileaks</a>,
+a <a href="http://www.youtube.com/playlist?p=B40846A8C158E643"> Las protestas contra la Cienciología </a>,
+al <a href="http://youtu.be/OZJwSjor4hM"> Westboro, la iglesia Bautísta </a>,
+Stephen Colbert de <a href="http://www.colbertnation.com/the-colbert-report-videos/375739/february-28-2011/anonymous-hacks-the-colbert-report">The Colbert Report </a> , <a href="http://www.huffingtonpost.com/2011/03/14/bank-of-america-anonymous-leak-mortgage_n_835220.html">Banco de América </a>,
+<a href="http://www.observer.com/2010/daily-transom/4chans-anonymous-army-takes-down-mastercard-visa-paypal-lieberman">Mastercard y Paypal </a>,
+a la <a href="http://arstechnica.com/tech-policy/news/2011/04/anonymous-attacks-sony-to-protest-ps3-hacker-lawsuit.ars"> Demanda contra GeoHotz de Sony </a>,
+y para el escándalo HBGary (ver primero el vídeo a continuación).
+Si no estas familiarizado con Anonymous, los videos de abajo muestran un sumario muy bueno, mira la super buena imagen en movimiento de vídeo thingyz directamente de abajo para tener una idea de lo que hacemos. Si ya estás familiarizado con Anonymous, estos videos no son realmente necesarios.</p>
+<div class="dividertwo"> </div>
+
+<div class="center">
+<iframe title="YouTube vídeo player" width="300" height="255" src="https://www.youtube.com/embed/wEV2CMfhCeo"> </iframe>
+<iframe title="YouTube vídeo player" width="300" height="255" src="https://www.youtube.com/embed/5i2-naTYsAM"> </iframe>
+<iframe title="YouTube vídeo player" width="300" height="255" src="https://www.youtube.com/embed/AG2tOSPfUFE"> </iframe>
+</div>
+<div class="dividertwo"> </div>
+
+<p> Esta es la información tutorial para #OpNewblood. Nuestra misión es ayudar a las personas interesadas en iniciar en Anonymous, que van desde los usuarios de computadoras que están constantemente en busca de 'cualquier tecla', a los usuarios que crean supercomputadoras de diseño (es decir, Watson y tu madre). De todas formas, actualmente ayudamos a obtener una configuración que te permita mantener contacto regular con otros Anonymous y para ayudar a navegar y usar el Internet sin exponer tu ubicación o cualquier otra información sensible. </P>
+
+<div class="dividerthree"> </div>
+<img alt="" src="../images/mask.png" class="center" />
+<div class="divider"> </div>
+<h2> IRC, Chateando </h2>
+<div class="dividerthree"> </div>
+<p> IRC, Charlando con regularidad permite la organización y nos permite tener una gran cantidad de lulz. Utilizamos un método muy básico de commnication que ha existido desde 1988 llamado IRC o Internet Relay Chat. <em> No es un crimen el participar en los debates. Tu tienes derecho de libertad de expresión y hablar no debería ser ilegal en ningun lugar. </em> Bueno, vamos a empezar: </p>
+<div class="dividerthree"> </div>
+Hola Newbloods, <br />
+<p> Bienvenidos a su introducción a Internet Relay Chat. IRC es una de las más antiguas formas de chat en línea, incluso antes de la internet (LOL). IRC permite la comunicación en tiempo real, además requiere pocos recursos en los sistemas de los usuarios en comparación con otras aplicaciones que hayan usado antes. Esta forma de conversación es elegante en su simplicidad, pero tiene un montón de características útiles, incluyendo la capacidad de ejecutar scripts en Python o Perl, el cifrado de los mensajes con FiSHLim e incluso la transferencia de archivos, si así se desea . <br />
+Como nuevo usuario, es imposible para nosotros conocer su nivel actual de comprensión de los diversos componentes que conforman el IRC. Eso hace que la creación de guías y tutoriales muy difícil. Internautas experimentados y los que tienen una formación técnica encontrarán gran parte de esta información aburrido y querrán saltarse todo y seguir con la charla. Los reclutas más verdes encontrarán algunas cosas familiares, pero tendrán muchas preguntas. Sin embargo, te recomendamos que tomes un tiempo y leas a través de todas las secciones de esta guía por lo menos una vez antes de dar el primer paso. Esto permitirá no sólo familiarizarse con la terminología, sino tambien hacer preguntas inteligentes que nos permite ayudar de forma rápida y precisa. Mantenemos un canal dedicado en la red para este propósito tanto con personal de la red y los voluntarios conocedores que están dispuestos a ayudarle a configurar su propio cliente IRC y asegurar su conexión. Así que echa un vistazo a través de la primera página y luego unente a nosotros en la red. </P>
+
+<div class="dividertwo"> </div>
+<h2> Seguridad y Anonimato </h2>
+
+<div class="dividertwo"> </div>
+<p> Bien, ahora viene la mala noticia. Nada es 100% seguro al contrario de lo que hayas podido escuchar. Como hemos visto recientemente con revelaciones sobre el espionaje al por mayor en el mundo por la NSA, el tema de la seguridad y mantener la privacidad ahora es mucho más alto que nunca en la lista. Las personas que nunca pensaron nada sobre el envío de sus detalles más íntimos a alguien más, están ahora reconsiderando esa situación. El intercambio libre y fácil de información, pensamientos, ideas y conocimientos no debería ser un crimen en ningun lugar<br />
+Mucho se ha oído hablar sobre VPN, conexiones cifradas, páginas web y correos electrónicos. Entonces, ¿qué son estas cosas misteriosas? Lo vamos a averiguar, ¿de acuerdo? </P>
+<div class="dividertwo"> </div>
+<h3> Virtual Private Network (VPN) </h3>
+Una red privada virual es una conexión desde su computadora a otra red. Algunos de ustedes pueden estar familiarizados con este tipo de conexiones, ya que se utilizan abiertamente por las empresas para manejar sus necesidades de comunicación interna y permitir a los empleados acceder a los sistemas desde ubicaciones remotas. Al configurarlos adecuadamente, también pueden ser utilizados por cualquier persona para crear una conexión segura a Internet y tienen la ventaja añadida de disfrazar su verdadera ubicación. Haga clic en el enlace de abajo para un breve tutorial sobre los diferentes tipos de conexiones VPN y encriptación. <br />
+<div class="dividertwo"> </div>
+<h4> <a href="vpn.html"> Redes privadas virtuales </a> </h4>
+<div class="divider"> </div>
+
+<h3> Seguridad </h3>
+<p> La seguridad en línea es un tema muy largo y complicado. Las diversas posibilidades y métodos para asegurar el equipo se combinan por usted, para adaptarse a su entorno único. No hay solución unica y perfecta para todos los usuarios de Internet. La razón de esto es simple: Todos usamos internet de diferentes maneras. Algunos navegar por Internet y leer mensajes de correo electrónico algunos solo para porno, etc. Otros pasan sus días en las redes sociales y twitter. La mayoría lo hacen en cierta medida de los negocios en línea, ya sea el pago de facturas o hacer compras. Por estas razones, no es posible que podamos cubrir todos los aspectos de la vida en línea y no haremos ningún intento de cubrir todas las situaciones. Podemos darle un comienzo ya partir de ahí, ayudaremos de una vez ahora que estás conectado a la red. Da clic en el enlace de abajo y lee la información, todas las veces que sea necesario hasta que tengas un entendimiento básico y entonces podremos pasar a la siguiente fase. </P>
+<div class="dividertwo"> </div>
+
+<h4> <a href="security.html"> Manual de seguridad </a> </h4>
+
+
+<div class="dividertwo"> </div>
+
+<!-- Imágenes -->
+<div class="divider"> </div>
+<h3> cifrado </h3>
+<p> Noticias recientes muestran los grandes esfuerzos de la NSA para comprometer la seguridad de Internet y podrían hacer parecer que la privacidad parezca algo imposible, pero todavía hay esperanza. Edward Snowden lo dijo que en un Q&amp;A en línea y poco después hizo su primer documento público: "obras de cifrado. Correctamente implementando sistemas de cifrado fuertes son una de las pocas cosas que usted puede confiar." Hemos elaborado una cartilla corta para ayudar a empezar con el correo electrónico más seguro (y archivos). </P>
+<div class="dividertwo"> </div>
+<h4> <a href="securemail.html"> Basico, Encripción de correos </a> </h4>
+<div class="divider"> </div>
+
+Clientes <h3> IRC </h3>
+El cliente de IRC es la aplicación que te permite conectar a los servidores de IRC. Los clientes son gratis, fáciles de usar, pero la configuración inicial puede ser confusa. Cada uno de los enlaces siguientes contienen los parámetros básicos de conección a nuestra red. Si no puedes conectarte a la red después de seguir la guía, entonces usa el webchat que esta más abajo en la página.
+
+<div class="dividerthree"> </div>
+<h4> <a href="windows.html"> de Windows </a> </h4>
+
+<div class="dividerthree"> </div>
+<h4> <a href="mac.html"> Mac OS X </a> </h4>
+
+<div class="dividerthree"> </div>
+<h4> <a href="linux.html"> Linux </a> </h4>
+
+<div class="dividerthree"> </div>
+
+<h3> <a href="droid.html"> Seguridad extra para Android </a> </h3>
+<div class="dividerthree"> </div>
+
+<h3> Conectar a IRC </h3>
+<p> ¿Listo para mojarse los pies? Si ha seguido nuestra guía, usted debe tener un conocimiento básico de las redes de IRC, lo que son y una idea de lo que implica la conexión y el uso de ellos en forma segura. Lo sé, no es posible que pueda recordar todo. Eso es bueno, nadie lo sabe todo y no esperamos que tu sí. Esperamos que pueda encontrar la información útil. También suponemos que tienes preguntas. Muchas, muchas preguntas. Para aquellos que buscan en Google para obtener más información, obtendran un 10 en internet. Aquellos que no lo hicieron, no te preocupes. Estas a punto de bajar por el agujero de gusano y los colaboradores de la otra dimension estarán esperando para darte algunas respuestas. Serás parte de un canal de ayuda. A veces es muy concurrido por allí, así que rogamos un poco de paciencia y cortesía ya que aun falta recorrer un largo camino. Hemos escuchado de toda clase de preguntas antes, por lo cual no debes tener miedo de preguntar, pero sí esperamos que hagas tu parte en todo esto. Trate de encontrar la respuesta por ti mismo primero. Hay un infobot en el canal que ayudara a proporcionar respuestas a las preguntas más frecuentes. Por favor utiliza esta función al unirte. Tenemos poco tiempo y paciencia para las personas que entran ahí a crear un drama, así que considera esto su advertencia. A continuación, busca algo de lo que agarrarte y da clic en el enlace de abajo para ir al siguiente paso. ¡Hasta pronto! </P>
+<div class="dividertwo"> </div>
+<h4> <a href="basics.html"> Conectar a IRC </a> </h4>
+
+<div class="divider"> </div>
+
+<div class="center">
+<strong> Bienvenido. <br />
+Ahora eres Anonymous, pero eso ya lo eras. <br />
+Somos legión . <br />
+No perdonamos. <br />
+No olvidamos. <br />
+Esperadnos. </Strong>
+<div class="dividerthree"> </div>
+<pre> agradecimiento especial (sin orden en particular): </pre>
+<div class="dividertwo"> </div>
+<pre> Effexor, Chuck, g33k, Cogitabundus, Wolfy, Strijela, Trivette, joepie91, no, crnobela, Taru, </pre>
+<pre> antivigilante, garrett, kyber, Topiary, anonymiss/Choobear, Denizen, spoonzy, Ryu, nessuno, TarenCapel, </pre>
+<pre> muninn/xuminn, AcidBurnTX, astro, dagnos_, Vyry, BarrettBrown, cred, heyguise, p0ke. </pre> <br />
+<pre> y otros con conocimiento que se aparecen en el canal, ayudan a alguien, y cabalgan hacia el atardecer. </pre> <br />
+<pre> ediciones y formato HTML por elmo/elmer y meter </pre>
+</div>
+<div class="dividertwo"> </div>
+
+<div id="footer"> 
+<p class="center">
+     <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/" target="_blank">
+<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /> </a>
+</p>
+</div>
+
+</div>
+</body>
+
+<!-- Mirrored from newblood.anonops.com/es/ by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:42:50 GMT -->
+</html>

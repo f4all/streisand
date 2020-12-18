@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/de/linux.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>IRC Linux Setup</title>
+	<meta name="description" content="OpNewBlood Linux setup guide" />
+	<meta name="keywords" content="anonops irc, anonops, join, anonymous, ops, operations, newblood, basic, irc, noob, webchat, security, vpn, guide" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+   
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570" />
+<h1>IRC unter Linux Installieren und Konfiguieren</h1>
+</div>
+<div class="divider"></div>
+
+<h2>Linux</h2>
+<div class="dividerthree"></div>
+Dieser Abschnitt erklärt die einzelnen Schritte um euch mit dem Anonops IRC Netzwerk via Linux zu verbinden.
+<div class="dividerthree"></div>
+<h4>GNU/Linux Debian (Ubuntu + SUSE)</h4> 
+Die aktuellste Xchat Version ist unter folgender Quelle zu finden
+<div class="dividerthree"></div>
+<pre>Installiert das Xchat Paket<br />
+<strong>sudo apt-get install xchat</strong></pre>
+<div class="dividerthree"></div>
+Einfacher geht es kaum.
+<div class="dividerthree"></div>
+<h4>GNU/Linux Redhat/Fedora</h4>
+Die aktuellste Version von Xchat befindet sich im EPEL Verzeichnis. Dies ist die einfachste Methode.<br />
+<div class="dividerthree"></div>
+<pre>Ladet das EPEL Paket über<a href="http://dl.fedoraproject.org/pub/epel/6/x86_64/" target="_blank"> Fedora Projekt</a><br />
+Als nächstes <strong>yum install xchat</strong></pre>
+<div class="dividerthree"></div>
+<h4>GNU/Linux Gentoo</h4>
+Ports Aktualisieren:
+<pre><strong>sudo emerge --sync</strong></pre>
+Und Installieren über:
+<pre><strong>sudo emerge -av xchat</strong></pre>
+<div class="dividerthree"></div>
+Fertig Installiert, einfach Xchat über die Apps-> Internet oder "xchat" über die Konsoleneingabe starten.
+<div class="dividerthree"></div>
+<h2>XChat Konfiguieren um auf das AnonOps Netzwerk zu gelangen:</h2>
+<div class="dividerthree"></div>
+1) Klickt den Add Button neben Netzwerk. Links davon steht ein untermalter Text mit New Network, ändert dies in was auch immer ihr wollt. Idealerweise Anonops, um einfacher den Server zu finden.
+<div class="dividerthree"></div>
+2) Nun Klickt auf Edit, und ein neues Fenster mit Server für Anonops öffnet sich.
+<div class="dividerthree"></div>
+<pre>Wieder auf Edit Klicken und den Text in: <strong>irc.anonops.com/6697</strong> ändern.
+Haken in das Kästchen: "Use SSL for all the servers on this network"
+genauso wie bei: "Accept invalid SSL certificate"</pre>
+<div class="dividerthree"></div>
+Wenn ihr dies möchtet könnt ihr euch auch Automatisch zum AnonNetzwerk verbinden lassen beim Programmstart. Dazu einfach ein Haken in "Connect to this network automatically".
+Ist nur Optional, kann aber dem ein oder anderen vielleicht Helfen.
+<div class="dividerthree"></div>
+3) Nun den Close Button drücken und ihr werdet wieder zurück zum Netzwerk Fenster gebracht.<br />
+Unter Networks, drückt auf euren gewählten Netzwerk Name (für viele wird es Anonops sein) und einfach auf Connect unten rechts Klicken.<br />
+<div class="dividerthree"></div>
+Der Client wird sich nun (hoffentlich Erfolgreich) mit dem Netzwerk verbinden.
+<div class="dividerthree"></div>
+Wird ein error angezeigt, Überprüft ob ihr "irc.anonops.com" richtig geschrieben habt. Sollte wirklich keine Verbindung mit irc.anonops.com zustande kommen, verwendet irc.anonops.net. 
+
+	<div id="footer"><!--Footer Begins -->
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/linux.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/de/linux.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+</html>

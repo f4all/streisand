@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/de/security.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Security Handbook</title>
+	<meta name="description" content="Security" />
+	<meta name="keywords" content="anonops irc, anonops, join, anonymity,anonymous, ops, operations, newblood, basic, irc, noob, webchat, security, vpn, guide" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+   
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/>
+<h1>Das #OpNewblood Super Geheime Sicherheits Handbuch</h1>
+<div class="dividerthree"></div>
+<pre>Wenn ihr noch nicht den IRC-Chat Guide gelesen habt</pre>
+<pre>um euer System richtig zu konfiguieren, empfehlen wir</pre>
+<pre>euch dies vorrangig zu tun.</pre>
+</div>
+
+<ul class="menu">
+<li><a href="#pre" target="_self">Vorwort</a></li>
+<li><a href="#tor" target="_self">Tor Einstellungen</a></li>
+<li><a href="#ffadd" target="_self">Empfohlene Firefox Addons</a></li>
+<!-- <li><a href="#i2p" target="_self">Setting up i2p</a>
+<ul>
+<li><a href="#inst" target="_self">Installation</a></li>
+<li><a href="#ffc" target="_self">Firefox Configuration</a></li>
+<li><a href="#ircc" target="_self">IRC Client Configuration</a></li>
+<li><a href="#irca" target="_self">I2p IRC on Android via irssi</a></li> 
+</ul>
+</li> -->
+<li><a href="#adt" target="_self">Erweiterte Schutzmaßnahmen</a></li>
+<li><a href="#gpg" target="_self">E-Mail Verschlüsselungs Grundlagen</a></li>
+<li><a href="#port" target="_self">Lösungen für tragbare Geräte</a></li>
+<li><a href="#guide" target="_self">Leitfaden für Fortgeschrittene</a></li>
+</ul>
+<div class="dividertwo"></div>
+
+<h2>Vorwort<a id="pre"></a></h2>
+MERKE: Solltet ihr Probleme bei einem Abschnitt in diesem Leitfaden haben, könnt Ihr uns gerne auf <a href="https://webchat.anonops.com/" target="_blank">https://webchat.anonops.com</a> Besuchen und es findet sich sicher jemand, der euch dabei Hilft weiter zu kommen. Es soll nicht unerwähnt bleiben dass dieser Leitfaden abschnittsweise schwierig ist ohne fundiertes Wissen über technische Funkionen von Informations-Technologie. Wir versuchen diesen Leitfaden einfach und auch für Laien verständlich zu machen, da ihr als Benutzer für die Sicherheit eurer Systeme selbst verantwortlich seid.
+<div class="dividerthree"></div>
+
+<img src="images/mask.png" alt="" class="center"/>
+<h3>Tor Einstellungen<a id="tor"></a></h3>
+Um Missbrauch zu vermeiden können TOR Exit Nodes sich nicht mit dem AnonOps IRC Server verbinden. Ihr könnt euch wie ihr wollt, mit unserem 'Hidden Service' in verbindung setzen. Weitere Informationen in dem entsprechenden Leitfaden <a href="https://anonops.com/tutorials.html" target="_blank">https://anonops.com/tutorials.html</a>
+<div class="dividerthree"></div>
+
+<h3>Windows</h3>
+<ol>
+<li>Hier Tor Downloaden: <a href="https://www.torproject.org/">https://www.torproject.org/</a>
+</li><li>Öffnet die .exe
+</li><li>Entpackt es in den vorgegebenen Ordner. Nun solltet ihr einen Ordner auf dem Desktop mit dem Namen "Tor Browser" haben. In diesem Start Tor Browser.exe ausführen. Wenn ihr möchtet könnt ihr mit rechtsklick eine Verknüpfung auf dem Desktop erstellen, vergewissert euch aber dass das Original im Tor Ordner bleibt.
+</li><li> Klickt <a href="https://check.torproject.org/" target="_blank">https://check.torproject.org/</a> um sicher zu gehen dass TOR richtig Funktioniert. Sollte euer Anbieter TOR sperren oder ihr braucht weitere Hilfe könnt ihr in den #OpNewblood Kanal kommen und eure Fragen dazu äussern, welchen ihr hier betreten könnt: <a href="http://webchat.anonops.com/" target="_blank">http://webchat.anonops.com</a>
+</li></ol>
+<div class="dividerthree"></div>
+
+<h3>Linux</h3>
+<ol>
+<li>Hier Tor Downloaden: <a href="https://www.torproject.org/" target="_blank">https://www.torproject.org/</a></li>
+<li>Extrahiert es wohin ihr es wollt. Voreingestelltes ist auch in Ordnung.</li>
+<li>Klick Start Tor Browser.</li>
+</ol>
+<div class="dividerthree"></div>
+
+<h3>Mac OSX</h3>
+<ol>
+<li>Hier Tor Downloaden: <a href="https://www.torproject.org/" target="_blank">https://www.torproject.org/</a>
+</li><li>Entpackt dies und fügt TorBrowserBundle_en-US.app zum Applicationen Ordner hinzu. (_en-US ist der Sprachen anhang)
+</li><li>Doppelklick auf TorBrowserBundle_en-US.app
+</li><li>Wenn es Probleme geben sollte werft einen Blick in <a href="https://www.torproject.org/docs/tor-doc-osx.html.en" target="_blank">https://www.torproject.org/docs/tor-doc-osx.html.en</a> für weitere Informationen.
+</li><li>Noch einmal, wenn euer Internetanbieter Tor Sperrt könnt ihr dies mit Brücken umgehen, im #Opewblood Kanal über den Webbrowser erhaltet ihr Hilfe: <a href="https://webchat.anonops.com/" target="_blank">https://webchat.anonops.com</a>
+</li></ol>
+<div class="dividerthree"></div>
+
+<h4>WICHTIG FÜR ALLE BETRIEBSSYSTEME</h4>
+<p>Die Struktur des Tor Browser Bundles wurde verändert, solltet ihr danach nur noch über Relays oder andere spezielle Einstellungen eine Verbindung aufbauen können gibts Anleitungen unter <a href="https://www.torproject.org/download/download.html.en" target="_blank">https://www.torproject.org/download/download.html.en</a>.</p><p> Hilfe um die Brückenrelais des Tor-Bundles zu Konfiguieren erhaltet ihr im #OpNewblood Kanal über den Browser: <a href="https://webchat.anonops.com/" target="_blank">https://webchat.anonops.com</a></p>
+
+<p>Um jederzeit zu überprüfen ob TOR richtig funktioniert, öffnet die Seite: <a href="https://check.torproject.org/" target="_blank">https://check.torproject.org/</a> und erhaltet weitere Informationen.</p>
+<h4>Fehlersuche: <a href="../www.torproject.html" target="_blank">www.torproject.org</a></h4>
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+
+<h2>Firefox Addons<a id="ffadd"></a></h2>
+	<div class="dividerthree"></div>
+<strong>Adblock Plus</strong>: Diese Erweiterung blockt rund 90% der Internet Dienste die rückschlüsse auf die Netzaktivität ziehen könnten um gezielte Angebote zu liefern. Es wird ausdrücklich empfohlen diese Erweiterung zu nutzen während ihr durchs Internet surft. Informationen werden von diesen Servern geladen und schicken gezielte Werbeangebote zu eurem Browser. Das ist schlecht. Nehmt bitte zur Kenntnis dass neuere Versionen des Addons auch die meisten Sozialen Netzwerk Bilder wie z.B. Facebook 'Like' Buttons blockt. Dies wird am besten so Konfiguiert dass ihr nur das Wichtigste angezeigt bekommt. <a href="https://addons.mozilla.org/en-us/firefox/addon/adblock-plus/" target="_blank">https://addons.mozilla.org</a>
+	<div class="dividerthree"></div>
+<strong>NoScript</strong>: Eine sehr nützliche Erweiterung die Javascript deaktiviert um die Privatsphäre zu schützen und bösartige Aktivitäten auszuschliessen. Die Regeln wo Javascript aktiv ist und wo nicht, können entweder für die einzelne Webseite oder Global festgelegt werden. <a href="http://noscript.net/" target="_blank">http://noscript.net/</a>
+	<div class="dividerthree"></div>
+<strong>RequestPolicy</strong>: Völlige Kontrolle über Cross-Site anfragen. Verbessert die Privatisiuerung des Surfens um andere Seiten keine euer Gewohnheiten zu übermitteln. Sichert euch vor Cross-Site Request Forgery (CSRF) und anderen Attacken. Arbeitet super zusammen mit NoScript. <a href="https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/</a>
+	<div class="dividerthree"></div>
+<strong>BetterPrivacy</strong>: Dies ist ein Werkzeug das Cookies erkennt und man kann sie über dieses ebenso entfernen. Es funktioniert wie "Opt-out" aus der Werbung und anderen Formen der Netzaktivitätserkennung. <a href="https://addons.mozilla.org/en-US/firefox/addon/betterprivacy/" target="_blank">https://addons.mozilla.org</a>
+	<div class="dividerthree"></div>
+<strong>FoxyProxy</strong>: FoxyProxy ist ein hochentwickeltes Proxy-Management-Werkzeug, das die begrenzten Proxy-Fähigkeiten von Firefox vollständig ersetzt. Verbesserte Funktionen wie eine Liste um dort Adressen zu speichern die ihr immer mit einem Proxy betreten wollt, und um dies zu Automatisieren, während ihr nebenbei nicht-gelistete Seiten besucht. <a href="https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/" target="_blank">https://addons.mozilla.org</a>
+	<div class="dividerthree"></div>
+<strong>Ghostery</strong>:  Noch ein Werkzeug das euch dabei Hilft die Verfolgungs-Cookies zu löschen (u.a. Automatisch), Ghostery alamiert euch wenn eine Website Cookies speichern möchte um auf den Besuch dieser Site zu schliessen. Informationen über diejenigen die versuchen eure Browser Daten auszulesen könnt ihr mit einem Klick auf den Button aufrufen, den Quellcode des Trackers anzeigen und um zu sehen wie der Cookie euch zurückverfolgt. Ihr könnt eine Liste der erlaubten Cookies erstellen und Updates erhalten (dies kann während des Konfiuierens vorgenommen werden oder unter den Optionen im Addon selbst ) <a href="https://addons.mozilla.org/en-US/firefox/addon/ghostery/" target="_blank">https://addons.mozilla.org</a>
+	<div class="dividerthree"></div>
+<strong>Greasemonkey</strong>: Ein super Addon das erlaubt, den Weg wie verschiedene Webseiten euch Informationen präsentieren selbst wählen zu können, unter benutzung minimaler Schnipsel des Javascript Codes. Das ist mehr als eine Addon "Engine" oder eine Projektplattform, welche es euch erlaubt Scripte für verschiedenste Dinge für das Addon zu Downloaden. <a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/" target="_blank">https://addons.mozilla.org</a>
+	<div class="dividerthree"></div>
+<strong>HTTPS Everywhere</strong>: eine Firefox-Erweiterung entwickelt für die Zusammenarbeit des Tor Projekts und der Electronic Frontier Foundation. Es hat den Zweck jede Webseite über eine https Verbindung zu erhalten. <a href="https://www.eff.org/https-everywhere" target="_blank">https://www.eff.org/https-everywhere</a>
+	<div class="dividerthree"></div>
+<strong>Secret Agent</strong>: Ändert eure Firefox/SeaMonkey HTTP Benutzerpräsenz permanent, um Fingerabdrücke zu vermeiden und dem Tracking entgegenzuwirken. Pro Tipp: Nutzt den Escape Knopf um das Einstellungs und Auswahlfenster zu schliessen. <a href="https://www.dephormation.org.uk/?page=81" target="_blank">https://www.dephormation.org.uk/?page=81</a>
+	<div class="dividerthree"></div>
+
+<img src="images/mask.png" alt="" class="center"/>
+
+
+<h2>Erweiterte Schutzmaßnahmen<a id="adt"></a></h2>
+<div class="dividerthree"></div>
+<h3>Virtuelle Maschinen</h3>
+Des weiteren empfehlen wir eine Virtuelle Maschine (VM) zu benutzen um das persönliche Betriebssystem von dem Anonymen zu trennen. Dies garantiert euch dass persönliche Daten nicht irgendwo durchsickern während ihr Anon-Relevante Bilder/Videos auf Sozialen Medien Seiten wie Twitter oder Facebook anseht. Es hat einige weitere Vorzüge wie zum Beispiel innerhalb kurzer Zeit jegliche Anon-Aktivität vom PC verschwinden zu lassen - in dem ihr die VM selbst löscht.<br />
+<div class="dividerthree"></div>
+<h4>Software für Virtuelle Maschinen</h4>
+VirtualBox - x86 und x64<br />VMWare Workstation 7 - x86 und x64<br />Windows Virtual PC - x86<br />
+Parallels Desktop - x86 und x64
+
+<div class="dividerthree"></div>
+<h3>Festplatten Verschlüsselung</h3>
+Festplatten Verschlüsselung ist ein weiterer Weg um eure Privatsphäre zu schützen. Die Software ermöglicht es nahezu Unmöglich zum machen dass jemand auf eure Daten zugriff erhält, ausser ihr selbst. Dies gilt für die Hardware selbst (USB Sticks, externe Festplatten etc.). 
+<div class="dividerthree"></div>
+<h4>Verschlüsselungs Software</h4>
+TrueCrypt - <a href="http://www.truecrypt.org/">http://www.truecrypt.org/</a><br />
+Bitlocker - ( nur unter Win 7 Ultimate)
+<div class="dividerthree"></div>
+<a id="gpg"></a>
+<h4>Datei und Email Verschlüsselung und Bereinugung</h4>
+<pre>(hinzugefügt von cred)</pre>
+<p>Mehr zu diesem Thema erhaltet ihr auf dem <a href="../securemail.html" target="_blank"><strong>Securemail</strong> Link</a>.</p>
+<div class="dividerthree"></div>
+
+<p>Bedient sich dem OpenPGP Standard, die folgende Software erstellt einen &quot;keyring&quot; (Schlüsselbund) für euch und bindet Name und eure E-Mail Adresse ein (keins von beidem muss echt sein, ich hab zwei, eine für meine wirkliche Identität und eine als Cred). Der Private Schlüssel ist ein Passwort geschützter Schlüssel denn ihr auf jedem System verwenden könnt auf dem ihr Informationen ENTSCHLÜSSELT; auf eurem Heimcomputer und, wenn ihr viel unterwegs seid, dem Android Telefon. Den öffentlichen Schlüssel benötigt man um Informationen und Daten zu VERSCHLÜSSELN. Wenn ihr mir Verschlüsselte Sachen schicken wollt, benötigt ihr meinen öffentlichen Schlüssel, (cred(@)mail.i2p -findet es für euch) Verschlüsselt die Daten damit und schickt sie mir. Der einzigste Weg an die Daten zu gelangen ist sie mit meinem Privaten Schlüssel und dem Passwort zu entschlüsseln. PGP ist der Industrielle Standard für Mailverschlüsselung auf hohem Niveau. GPG ist die kostenlose Version von PGP, welches Kommerziell ist.</p><br />
+
+GPG (Windows) <a href="http://gpg4win.org/download.html">http://gpg4win.org/download.html</a><br />
+GPG (Mac) <a href="https://gpgtools.org/">https://gpgtools.org/</a><br />
+GPG (Linux) <a href="http://www.gnupg.org/">http://www.gnupg.org/</a><br />
+APG (Android) <a href="https://market.android.com/details?id=org.thialfihar.android.apg">https://market.android.com/details?id=org.thialfihar.android.apg</a>
+<div class="dividerthree"></div>
+<h3><a href="securemail.html">E-Mail Verschlüsselungs Grundlagen</a></h3>
+
+<!-- <h4>Proxy Lists</h4>
+<a href="http://www.freeproxies.org/">http://www.freeproxies.org</a><br />
+<a href="http://www.socks24.org/">http://www.socks24.org</a><br /> 
+<a href="http://www.samair.ru/proxy">http://www.samair.ru/proxy</a><br /> -->
+
+<div class="dividerthree"></div>
+
+<h3>Linux TOR VM</h3>
+Es ist durchaus möglich Tor wie ein VPN zu nutzen mit einem Linux-Paket für VMs. Sobald die VMs gestartet werden ist es möglich eine VPN Verbindung via Tor VM zu erstellen. Die VM Pakete gibt es mit zusätzlichen Privatisierungs annehmlichkeiten wie Squid und Privoxy.<br />
+<br /><b>Linux Tor Software</b><br />JanusVM - <a href="http://janusvm.com/">http://janusvm.com/</a><br />TAILS - <a href="https://amnesia.boum.org/">https://amnesia.boum.org/</a>
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="guyfawkesmask" class="center"/>
+
+<h3>Tragbare Lösungen<a id="port"></a></h3>
+<div class="dividerthree"></div>
+<p>Tragbar bezieht sich auf eigenständige OS und Software Pakete die von CD, DVD oder USB Stick aus gestartet werden können. Dies gewährt die einfache Mitnahme deines Anon OS Setups in der Tasche, um sie auf anderen Computern zu starten und sofort (auf sicherem Wege) loslegen zu können.</p>
+
+<div class="dividerthree"></div>
+<h4>Das Amnesic Incognito Live System: <a href="https://amnesia.boum.org/download/index.en.html">https://amnesia.boum.org/download/index.en.html</a></h4>Eine Startfähige, Linux Distribution fokusiert auf Sicherheit und die wahrung der Privtsphäre. Verpackt in einem einzigem Download.
+<div class="dividerthree"></div>
+
+<h4>Kali: <a href="http://www.kali.org/">http://www.kali.org/</a></h4> Der Nachfolger von Backtrack. Eine große Auswahl an Werkzeuge für Penetration-Tests, das ultimative Schweizer Taschenmesser.
+<div class="dividerthree"></div>
+<h4>Ubuntu Privacy Remix: <a href="https://www.privacy-cd.org/">https://www.privacy-cd.org/</a></h4>Für den Start von CD/USB etc gedacht. Keine Installation auf der Festplatte wird benötigt- Daten darauf bleiben unverändert.
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+
+<h2>Leitfaden für Fortgeschrittene<a id="guide"></a></h2>
+<pre>von Denizen</pre>
+<div class="dividerthree"></div>
+<h3>Vorwort:</h3> 
+Die Informationen in diesem Teil können extrem Verwirrend für neue Benutzer sein die kein fundiertes Wissen in der Informations Technik haben. Seid stets Vorsichtig mit selbstgebastelten Dingen die ihr nicht vollständig versteht denn diese könnten zu unerwünschten Ergebnissen führen, eure Erkennung, oder in extremen Fällen, System Beschädigungen oder gar rechtliche Folgen.
+Entwurf von: Denizen<br />Wie der ultimative Denizen, müsst ihr Systeme in unterschiedlichsten Wegen betreten können. Es gibt viele Möglichkeiten, eine Website zu erreichen und um den Schutz für sich selbst zu erhöhen im Bezug auf Anonymität und minimierten Schwachstellen.
+<div class="dividerthree"></div>
+<h3>Inhaltsverzeichnis</h3>
+<ul>
+<li>SSH Tunnelling Techniken</li>
+<li>VPN (Virtual Private Network) Sub-netting Techniken</li>
+<li>Anonymous SOCKS4/SOCKS5 Proxy Techniken auf OS Ebene (z.B. Network Layer 3)</li>
+<li>Anonymous SOCKS4/SOCKS5 Proxy Techniken auf Internet Browser Ebene (z.B. Firefox)</li>
+<li>Lokales DNS Hosting und Direktes via IP Internet Browsen</li>
+<li>Windows /system32/drivers/etc/Hosts File IP DNS Lookup (Vereinigt irgendeine IP mit irgendeinem Hostnamen, Permanent)</li>
+</ul>
+
+<h4>PuTTY Handhabung</h4>
+<pre><a href="http://oldsite.precedence.co.uk/nc/putty.html" target="_blank">http://oldsite.precedence.co.uk/nc/putty.html</a></pre>
+<div class="dividerthree"></div>
+Normale Verbindungen ins Internet (ausser ihr benutzt SSL) sind als Klartext unverschlüsselte Übertragungen aufgeteilt in Datenpakete. Wird ein Paketsniffer verwendet, ist es möglich die meisten abzufangen, und ihre "Datenladung" in normalem Text zu sehen. Diese könnten Nutzernamen, E-Mails, IM's, und ab und zu eben Passwörter und sensible Informationen enthalten. Wenn ihr einen Tunnel richtig einrichtet, habt ihr eine sichere, verschlüsselte Verbindung zu dem Gerät mit dem ihr euch Verbinden wollt, und helft beim Vermeiden der verwendung von Paketsniffern die versuchen Informationen zu stehlen. Dies ist nicht nur Hilfreich um seinen Standort zu verschleiern, sondern auch eine Grundlage um die IP Addresse zu verstecken wenn ihr von Zuhause aus Surft. Benutzt ihr einen Tunnel für die Übertragungen, haben Pakete die IP Addresse des Ursprungs statt der eigenen. Nochmal, wie oben beschrieben, könnt ihr keinem VPN (SSH) Provider vertrauen der kostenlos ist. Es ist nur zu eurem besten wenn ihr einen kostenpflichtigen VPN Anbieter wählt.<br />
+<div class="dividerthree"></div>
+<h4>OpenVPN GNU/Linux</h4>
+Informationen wie man ein GNU/Linux System konfiguiert um OpenVPN nutzen zu können findet ihr hier: <a href="http://openvpn.net/howto.html" target="_blank">http://openvpn.net/howto.html</a> (OpenVPN bietet euch nur zwischen Euch und dem Server sicherheit, nicht aber zwischen Server und Internet. Euer Server agiert als Vermittler und ist Identifizierbar (ausser er wird mit zusätzlicher Verschleierungs Technik ausgestattet)<br />
+<div class="dividerthree"></div>
+<h4>SOCKS4/5 Proxys</h4>
+Wenn ihr Interesse daran habt wie man SOCKS 4/5 Proxies unter Firefox Browser verwendet, könnt ihr eine ensprechende Anleitung erhalten unter: <a href="http://uniqueinternetservices.com/configure-proxy-for-firefox.html">http://uniqueinternetservices.com/configure-proxy-for-firefox.html</a><br />
+<div class="dividerthree"></div>
+<h4>DNS Konfiguieren</h4>
+Dieser Abschnitt erklärt, wie ihr den Namenserver ändert, der die Domänen mit IP Adressen verknüpft und manchmal benutzt wird, damit der Internetanbieter euch zurück verfolgen kann, sogar wenn ihr RSA nutzt. Selbst bei einer starken, dreifachen des Verschlüsselung solltet ihr sicher stellen, dass die Anfrage von euch oder einem Ihnen freundlich gesinnten durchgeführt wird. DNS Anfragen sollten idealerweise verschlüsselt sein und solltet ihr super-paranoid sein, gibt es Proxies, die diesen Service anbieten. Leider kenne ich diese nicht auswendig, schaut am besten unter <a href="http://dnscurve.org/in-benefits.html">http://dnscurve.org/in-benefits.html</a> <br />
+<div class="dividerthree"></div>
+<h4>Windows Hostnamen ändern</h4>
+Dieser Hacker Trick ist ein guter Weg um dauerhaft ein IP-Fenster (besser als Mirror bekannt) zu schaffen, z.B. für bekannte Soziale Netzwerk Seiten wie Facebook, Twitter, etc, etc. Wenn ihr möchtet findet ihr weitere Informationene unter: <a href="http://www.ehow.com/how_5225562_edit-windows-hosts-file.html" target="_blank">http://www.ehow.com/how_5225562_edit-windows-hosts-file.html</a><br />
+Wenn ihr, cannabis.com auf 4.2.2.1 möchtet, dann könnt ihr es einfach wie den 127.0.0.1 localhost Eintrag, den ihr in eurem Windows-Setup findet eingeben. Dies umgeht Namenserver anfragen bei den meisten Browsern (Prüft um sicher gehen zu können mit einem Paketsniffer nach)<br />
+<div class="dividerthree"></div>
+<h4>Pakete Abfangen</h4>
+Sie alle benötigen einen Installierten PCap Treiber der bei jedem Download dabei ist...<br />Pakete zu verstehen benötigt Zeit und Übung. Um loszulegen Installiert eine Kopie von Wireshark (<a href="http://www.wireshark.org/" target="_blank">http://www.wireshark.org/</a>) oder MS Network Monitor 3.4, beide sind kostenlos. Wenn ihr keine Oberfläche seht das Mitschreiben kann müsst ihr es evtl. als Administrator ausführen. Zur Identifikation, welche Schnittstelle ihr seht, ist zunächst der eigene Verkehr festzustellen, klickt dazu auf das erste (oben-links) Symbol "Liste verfügbarer Schnittstellen" und sucht nach einer mit steigenden Zahlen, es ist die aktive. Startet es und seht wie die Pakete strömen. Vielleicht seht ihr viel Datenverkehr, öffnet und schliesst Zeug das irgendwas runterlädt oder streamt. Ihr könnt runter Scrollen um ein langsameren ARP und NetBios Verkehr, der gelegentliche UPNP Stoß und anderes Zeugs. Seid ihr an einem sicheren VPN angebunden oder ähnliches seht ihr fast nur alles in SSL/TLS grau gefärbte Pakete oder alle UDP Blaue Pakete und so ähnlich. Versucht ein andere aktive Verbindung (ein anderes TAB) um das gute Zeug zu sehen. Nehmt euer Heimnetzwerk und spielt ein wenig; seht wie DHCP handshakes aussehen, DNS Anfragen/Antworten, Navigiert zu einem geteilten Ordner und seht was es euch alles zeigt. Wenn ihr wisst wie, macht einen Nmap Scan und seht wie offensichtlich es ist und lernt Techniken um es in einer Weise zu  verdecken.<a href="http://www.wireshark.org/docs/">http://www.wireshark.org/docs/</a>  &lt;- Lest und schaut ein paar Videos. Es gibt viel zu tun aber einmal Erlernt ist es einfach zu verstehen. TCPDump(linux)/WinDump(windows) - Kommandozeilen Paket erfassung um sie später zu Analysieren.  <a href="http://www.tcpdump.org/">http://www.tcpdump.org/</a> und <a href="http://www.winpcap.org/windump/">http://www.winpcap.org/windump/</a>NetworkMiner (<a href="http://networkminer.sourceforge.net/)">http://networkminer.sourceforge.net/)</a> ist eine Alternative welches einfaches Pakete sortieren erlaubt (Alphabetisch als Beispiel) und um einfach nur zu Wühlen.7. TCP/IP UND DAS WEITE INTERNET<br />(DNS/HTTP Port 80/Logging/Sicherer weg um sich mit dem 'gecrackten' Gerät zu verbinden).. PROXY CHAINING, SSH CLI Verkettung vielleicht? <ul><li>Ändere DNS Einstellungen unter Windows XP</li></ul>    <a href="http://www.mediacollege.com/computer/network/dns.html">http://www.mediacollege.com/computer/network/dns.html</a>Netzwerk Schichten &amp; OSI Modell. Damit ein Sicherheitsexperte, eine Software oder Gerät das auf einem Netzwerk-oder Sicherheitssystem läuft wirklich zu verstehen, müsst ihr in der Lage sein, die Auswirkungen von Änderungen, die zu einem bestehenden System vorgenommen werden vollständig zu begreifen. Ganz egal was ihr tut und in welcher Netzwerk Schicht auch immer, ihr werdet mit den anderen Schichten in berührung kommen. Zum Beipiel die Datenverbindungsschicht (Layer 2 OSI) bedient sich der Physischen Schicht (Layer 1 OSI), und so weiter .Layer 1 : Physische Schicht -Das ist die Elektrische und Physische Spezifizierung auf dem Gerät. Insbesondere im Bezug auf Pins, Spannungen, Verstärker, Knotenpunkten, Netzwerk Adaptern, Host Bus Adapter und SANs (Storage Area Networks). Standards wie der RS-232C Com Port Standard popularisiert in den 90ern benutzt physische Drähte um auf Medien zuzugreifen. Ein so Populäres Medium ist das Internet. Zu dem die früheren Modems eine Verbindung aufgebaut haben. Layer 2 : Datenverbindungsschicht -Die Datenverbindungsschicht liefert funktionelle und prozesstechnisch Mittel zum übertragen der Daten zwischen Netzwerkinstanzen mit physischen Schichten (oder Kabel/Adapter/Router/Verstärker) und so weiter und so fort. Der Originale Layer 2 war ursprünglich für den Punkt zu Punkt Transfer nur gedacht. LAN und Multimedien wurden unabhängig vom ISO Standart entwickelt (IEEE 802). WAN aund LAN sind Dienste auf der Datenverbindungsschicht mit geordneten Bits, von der physischen Schicht zu logischen Rahmensequenzen. Diese Rahmen beinhalten relativ wichtige Information zum Transmission Control Protocol (TCP), und schliesst Informationen wie zum Beispiel eure IP (Internet Protocol) Addresse. Diese Addresse ist gebunden durch Dienstschichten für die TCP (Transmission Control Protocol) Transportschicht. 8. Hack in einem Sack: Das Metasploit Framework<br />    Metasploit ist ein Programm entworfen für Penetration-Tests, und es beinhaltet beide Backtrack und Gnacktrack LiveCDs aufgeführt in der Mobilen Versions Sektion. Es hat eine Kommandozeile, ein Graphische Oberfläche, eine Web Oberfläche, egal was auch immer, ist es in Wirklichkeit, die Welt erste Punkt-und-Klick Hacker Software. Es besitzt eine riesige, sich ständig erweiternde Datenbank benutzbarer Exploits, welche ihr dazu verwenden könnt um Zugang zu angreifbaren Rechensystemen zu erhalten.  <a href="http://www.metasploit.com/" target="_blank">http://www.metasploit.com/</a>
+<div class="dividerthree"></div>
+<h4>Schlusswort</h4>
+Vielen Dank für das lesen dieses Dokuments, das habt ihr doch oder? Solltet ihr Fragen haben kommt bitte in den #Opnewblood Kanal (Erreichbar unter anderem über den Browser via <a href="https://webchat.anonops.com/" target="_blank"><u>https://webchat.anonops.com</u></a>) und Lest wiederholt diese Seite um auf der sicheren Seite zu sein. Schützt eure eigene Identität, das ist das wichtigste um 'Anonymous' zu sein.
+<div class="dividerthree"></div>
+In unserer Welt ist ein guter Schutz der beste Angriff.
+
+	<div id="footer"><!--Footer Begins -->
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/security.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/de/security.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+</html>

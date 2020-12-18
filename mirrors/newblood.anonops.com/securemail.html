@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- LAST MODIFIED BY VELVEETA 09/16/2013 -->
+
+<!-- Mirrored from newblood.anonops.com/securemail.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:00 GMT -->
+<head>
+    <!-- TemplateBeginEditable name="Main" -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+<title>Email Encryption Basics</title>
+<meta name="description" content="AnonOps Newblood Encryption Information" />
+	<meta name="keywords" content="anonymous PGP, PGP, anonymous irc, openpgp, GPG, GnuPG" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+
+</head>
+<body>
+ <div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/><br />
+<h1>Email Encryption Basics</h1>
+</div>
+<div class="dividertwo"></div>
+
+<ul class="menu2">
+<li><a href="#intro" target="_self">Introduction</a></li>
+<li><a href="#soft" target="_self">Software Solutions</a>
+<ul>
+
+<li><a href="#gpg" target="_self">GnuPrivacyGuard</a></li>
+<li><a href="#enig" target="_self">Enigmail</a></li>
+<li><a href="#claws" target="_self">Claws Email</a></li>
+<li><a href="#gpg4" target="_self">Gpg4win</a></li>
+<li><a href="#gnup" target="_self">GnuPGk</a></li>
+<li><a href="#ppgp" target="_self">Portable PGP</a></li>
+<li><a href="#gpgt" target="_self">GPG Tools</a></li>
+</ul></li>
+<li><a href="#quick" target="_self">Quick Start</a></li>
+<li><a href="#more" target="_self">Additional Resources</a></li>
+</ul>
+<div class="dividertwo"></div>
+<h4>Regular Email and Privacy<a id="intro"></a></h4>
+<p>When you send an email, its contents are open for anybody to read. Email is like sending a postcard: anyone who can access it can read it.</p>
+<div class="dividertwo"></div>
+<p>To keep data sent via email private, you need to encrypt it. Only the intended recipient will be able to decrypt the message while anybody else sees only gibberish.</p>
+<div class="dividertwo"></div>
+<p>Public key encryption is a special case of encryption. It operates using a combination of two keys:</p>
+    <ul>
+      <li>a private key and
+      </li>
+      <li>a public key,
+      </li>
+    </ul>
+ <p>which together form a pair of keys.</p>
+<div class="dividertwo"></div>
+<p>The private key is kept secret on your computer since it is used for decryption. The public key, which is used for encryption, is given to anybody who wants to send encrypted mail to you.</p>
+<div class="dividertwo"></div>
+
+<h4>Sending Public-Key Encrypted Mail</h4>
+<p>The sender's encryption program uses your public key in combination with the sender's private key to encrypt the message.</p>
+
+<div class="dividertwo"></div>
+<h4>Receiving Public-Key Encrypted Mail</h4>
+ <p>When you receive the encrypted message, you need to decrypt it. Decryption of a message encrypted with a public key can only be done with the matching private key. This is why the two keys form a pair, and it is also why it is so important to keep the private key safe and to make sure it never gets into the wrong hands (or in any hands other than yours).</p>
+<div class="dividertwo"></div>
+<h4>Why the Integrity of the Public Key is Essential</h4>
+
+<p>Another crucial point with public key encryption is the distribution of the public key.
+<div class="dividertwo"></div>
+<p>Public key encryption is only safe and secure if the sender of an encrypted message can be sure that the public key used for encryption belongs to the recipient. A third party could produce a public key with the recipient's name and give it to the sender, who uses the key to send important information in encrypted form. The encrypted message is intercepted by the third party, and since it was produced using their public key they have no problem decrypting it with their private key.</p>
+<div class="dividertwo"></div>
+<h4>This is why it is mandatory that a public key is either given to you personally <del>or authorized by a certificate authority.</del> (The CA model is so hopelessly broken it can be considered useless for this purpose.)</h4>
+<div class="dividertwo"></div>      
+<h3><a href="https://en.wikipedia.org/wiki/Web_of_trust" target="_blank">Web of Trust</a></h3>
+<p>The web of trust concept was first put forth by PGP creator Phil Zimmermann in 1992 in the manual for PGP version 2.0:</p>
+<p>
+      As time goes on, you will accumulate keys from other people that you may want to designate as trusted introducers. Everyone else will each choose their own trusted introducers. And everyone will gradually accumulate and distribute with their key a collection of certifying signatures from other people, with the expectation that anyone receiving it will trust at least one or two of the signatures. This will cause the emergence of a decentralized fault-tolerant web of confidence for all public keys.</p>
+<p>For more information on Web of Trust issues and how to build such a Web of Trust, see <a href="http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html" target="_blank">http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html</a>
+    </p>
+    <div class="dividertwo"></div>
+<h4>Signing the Keys of Trusted Contacts</h4>
+<p>When you exchange public keys with people you trust, that is, you are completely certain of who you're dealing with, you use your own key to "sign" the key of the other person. This helps to build the Web of Trust, and eliminates issues with man in the middle or third party interception type scenarios.</p>
+<div class="dividertwo"></div>
+<h3>Software Solutions<a id="soft"></a></h3>
+<p>PGP was the original encryption package. PGP stands for Pretty Good Privacy. PGP is now a private, for-profit company, a division of Symantec and is a subscription based product. The Open Source equivalent in use now is GPG (GnuPrivacyGuard), and software is available for most operating systems. Both are based on the OpenPGP standard and are pretty much cross-compatible.</p>
+<div class="dividertwo"></div>
+ <h4><a href="http://www.gnupg.org/" target="_blank" id="gpg">Gnu Privacy Guard Homepage</a></h4>
+ <p>GnuPG is the GNU project's complete and free implementation of the OpenPGP standard as defined by RFC4880 . GnuPG allows to encrypt and sign your data and communication, features a versatile key management system as well as access modules for all kinds of public key directories. GnuPG, also known as GPG, is a command line tool with features for easy integration with other applications. A wealth of frontend applications and libraries are available. Version 2 of GnuPG also provides support for S/MIME.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://www.enigmail.net/home/index.php" target="_blank" id="enig">The EnigMail Project</a></h4>
+<p>Enigmail is a security extension to Mozilla Thunderbird and Seamonkey. It enables you to write and receive email messages signed and/or encrypted with the OpenPGP standard. Sending and receiving encrypted and digitally signed email is simple using Enigmail. When starting it for the first time, you are guided through the basic setup. We also prepared a new users' guide that explains how to use OpenPGP. Enigmail is available for any system running Mozilla products.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://www.enigmail.net/documentation/quickstart.php">EnigMail Quick Start Guide</a></h4>
+<div class="dividertwo"></div>
+<h4><a href="http://www.claws-mail.org/" target="_blank" id="claws">Claws Email</a></h4>
+<p>Claws Mail is a user-friendly, lightweight, and fast email client for Windows and most flavors of *nix. It comes with the GPGME plugin and is ready-to-go solution for Windows/Linux. The appearance and interface are designed to be familiar to new users coming from other popular email clients, as well as experienced users. Almost all commands are accessible with the keyboard. The messages are managed in the standard MH format, which features fast access and data security. You'll be able to import your emails from almost any other email client, and export them just as easily. Lots of extra functionality, like an RSS aggregator, calendar, or laptop LED handling, are provided by extra plugins. </p>
+<div class="dividertwo"></div>
+<h4><a href="http://gpg4win.org/" target="_blank" id="gpg4">Gpg4win</a></h4>
+<p>Gpg4win runs on Windows XP, Vista and 7. Both 32 and 64bit systems are supported. The Outlook plugin GpgOL is compatible with Microsoft Outlook 2003 and 2007. Outlook 2010 is not supported.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://sourceforge.net/projects/gnupgk/" target="_blank" id="gnup">GnuPGk - Windows shell gui for gpg</a></h4>
+<p>A GnuPG Frontend GUI made in C#. It is compatible with PGP as well so it can be a very useful tool for encryption/decryption. It also incorporates a shell extension so it can be easy to right click and encrypt or decrypt.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://ppgp.sourceforge.net/" target="_blank" id="ppgp">Portable PGP</a></h4>
+<p>Portable PGP is a fully featured, lightweight, java based, open source PGP tool. It allows to encrypt,decrypt,sign and verify text and files with a nice and absolutely straight graphical interface. It's absolutely simple to use and provides everything you need to get started with PGP cryptography.<br />
+Works with Oracle Java 7, Windows 7 x64 and Ubuntu (x64) OpenJDK. USB stick version available now.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://gpgtools.org//" target="_blank" id="gpgt">GPG Tools - A Complete Toolkit for Macs, including Apple Mail integration</a></h4>
+<p>Use GPG Suite to encrypt, decrypt, sign and verify files or messages. Manage your GPG Keychain with a few simple clicks and experience the full power of GPG easier than ever before. For OSX 10.6+.</p>
+<div class="dividertwo"></div>
+<p>By downloading GPG Tools and Enigmail plugin, Mac users are good to go with either Apple Mail or Mozilla mail (Thunderbird, Seamonkey).</p>
+<div class="dividertwo"></div>
+<h3>Quick Start<a id="quick"></a></h3>
+<p>Encrypt an email account you already have: Thunderbird with Enigmail; Mac Mail with GPGTools; Outlook with GPG4Win.</p>
+<p>For Windows or Linux: use Thunderbird with Enigmail plugin, or use Claws Mail with built in GPGME.</p>
+<p>For Mac: install GPG Tools, then use Apple Mail, or Thunderbird with Enigmail plugin.</p>
+<p>For more information on these topics and a walk-through of intalling Thunderbird/Enigmail/GPG please visit <a href="https://securityinabox.org/en/thunderbird_main" target="_blank">Security in-a-box.</a>
+<div class="dividertwo"></div>
+<h3><a href="http://www.theregister.co.uk/2013/08/22/guardian_snowden_advice" target="_blank">How to set up your GPG key to be as secure as possible.</a></h3>
+<p>Use what the NSA uses! From an article at theregister.co.uk.</p>
+<div class="dividertwo"></div>
+<h3>Additional Resources<a id="more"></a></h3>
+<div class="dividertwo"></div>
+<h4><a href="http://ipgmail.com/" target="_blank">iPGMail - PGP for iOS</a></h4>
+<p>iPGMail is an iPhone/iPad app for sending and decrypting PGP encoded messages.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://itunes.apple.com/us/app/opengp/id414003727?mt=8" target="_blank">oPenGP - </a></h4>
+<p>oPenGP is a solution to support OpenPGP standard (RFC 4880) on your iOS device. Fully compliant with GPG &amp; PGP® Desktop software.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://www.thialfihar.org/projects/apg/" target="_blank">Android Privacy Guard (APG) - an Android GPG client</a></h4>
+<p>From the website: "There's no public key encryption for Android yet, but that's an important feature for many of us. APG tries to fill that void, with new features quickly being added. Hopefully APG will grow into a fully functional OpenGPG implementation of GPG or PGP calibre." APG works with <a href="http://code.google.com/p/k9mail/" target="_blank">K-9 Mail.</a></p>
+<div class="dividertwo"></div>
+<h4><a href="https://countermail.com/" target="_blank" id="webmail">Countermail</a></h4>
+<p>Countermail is a Sweden based webmail provider with integrated GPG support. Mail is encrypted on your own machine before sending, and vice versa. Accepts Bitcoin. Extremely secure, protects against man-in-the-middle (MITM) attacks, USB key option.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://shazzlemail.com/" target="_blank">Shazzlemail - privacy-protective and
+surveillance-resistant secure email service.</a></h4>
+<p>ShazzleMail is a free smartphone (iOS and Android) application that allows you to send private email to anyone in your contacts list. You can also use ShazzleMail on your laptop or desktop with an email client that supports POP/SMTP interface, including Microsoft Outlook. ShazzleMail sends all communications over a secure line, and keeps your email on your local storage device and not in some third party cloud. Based in Braintree, MA.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://crypto.cat/" target="_blank">Cryptocat</a></h4>
+<p>Secure web chatting.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://safetyjabber.com/" target="_blank">SafetyJabber</a></h4>
+<p>Jabber client with integrated PGP encryption for Windows, Mac, and iOS. A free version is available to download.</p>
+<div class="dividertwo"></div>
+<h3>Using GPG with Gmail and other webmail providers</h3>
+<p>There are no plugins for browsers supporting GPG within webmail that are up to date and supported nor are they really secure. Any plugin based webmail solution where you type your message and then click a button to encrypt before sending is useless from a security standpoint. We recommend you do not use plain webmail. If you must use webmail and need encryption you must type your mail text in Notepad or other text editor, encrypt with GPG using ASCII armor, and them paste the result into your webmail.</p>
+<div class="dividertwo"></div>
+<p><em>Foreign intelligence organizations use the Internet for covert and clandestine communication without detection and you can as well. Do not believe that the NSA or DOJ is all powerful. They are not and they can be defeated.</em></p>
+ 
+	<div id="footer"><!--Footer Begins -->
+	<h2 class="center"><a href="index-2.html">Back to the OpNewblood main page</a></h2>
+	<div class="dividerthree"></div>
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/encryption.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->  
+</body>
+
+<!-- Mirrored from newblood.anonops.com/securemail.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:00 GMT -->
+</html>

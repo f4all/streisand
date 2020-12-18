@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- LAST MODIFIED BY VELVEETA 09/16/2013 -->
+
+<!-- Mirrored from newblood.anonops.com/de/securemail.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+<head>
+    <!-- TemplateBeginEditable name="Main" -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+<title>Email Encryption Basics</title>
+<meta name="description" content="AnonOps Newblood Encryption Information" />
+	<meta name="keywords" content="anonymous PGP, PGP, anonymous irc, openpgp, GPG, GnuPG" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+
+</head>
+<body>
+ <div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/><br />
+<h1>Grundsätze zur E-Mail Verschlüsselung</h1>
+</div>
+<div class="dividertwo"></div>
+
+<ul class="menu2">
+<li><a href="#intro" target="_self">Einführung</a></li>
+<li><a href="#soft" target="_self">Software Lösungen</a>
+<ul>
+
+<li><a href="#gpg" target="_self">GnuPrivacyGuard</a></li>
+<li><a href="#enig" target="_self">Enigmail</a></li>
+<li><a href="#claws" target="_self">Claws Email</a></li>
+<li><a href="#gpg4" target="_self">Gpg4win</a></li>
+<li><a href="#gnup" target="_self">GnuPGk</a></li>
+<li><a href="#ppgp" target="_self">Tragbares PGP</a></li>
+<li><a href="#gpgt" target="_self">GPG Tools</a></li>
+</ul></li>
+<li><a href="#quick" target="_self">Schnellstart Leitfaden</a></li>
+<li><a href="#more" target="_self">Zusätzliche Programme</a></li>
+</ul>
+<div class="dividertwo"></div>
+<h4>Reguläre Email and Privatsphäre<a id="intro"></a></h4>
+<p>Wird eine unverschlüsselte Email verschickt ist sein Inhalt für jeden Sichtbar. Die E-Mail ist dann wie eine Postkarte: jeder der Zugriff aus diese hat kann sie Lesen.</p>
+<div class="dividertwo"></div>
+<p> Um den Text unleserlich zu machen müsst ihr ihn Verschlüsseln. Nur der gewollte Empfänger wird in der Lage sein ihn entschlüsseln, alle anderen sehen nur Kauderwelsch.</p>
+<div class="dividertwo"></div>
+<p>Verschlüsselung mit einem öffentlichen Schlüssel ist ein ganz spezieller Fall. Die Funktionsweise ist die Kombination von 2 Schlüsseln:</p>
+    <ul>
+      <li>Ein privater Schlüssel und
+      </li>
+      <li>ein öffentlicher Schlüssel
+      </li>
+    </ul>
+ <p>Die beiden bilden ein Schlüsselpaar.</p>
+<div class="dividertwo"></div>
+<p>Der Private befindet sich versteckt auf eurem Computer und dient der Verschlüsselung. Der Öffentliche hingegen, ist zum Entschlüsseln und für jeden der euch selbst eine Verschlüsselte Mail senden möchte.</p>
+<div class="dividertwo"></div>
+
+<h4>E-Mails werden mit dem öffentlichen Schlüssel versendet</h4>
+<p>Das Programm des Absenders benutzt euren öffentlichen Schlüssel in Kombination mit dem Privaten des Absenders um diese zu Verschlüsseln.</p>
+
+<div class="dividertwo"></div>
+<h4>Verschlüsselte Mails empfangen</h4>
+ <p>Erhaltet ihr eine verschlüsselte Nachricht müsst ihr sie zunächst Entschlüsseln. Das Verschlüsseln einer Nachricht mit dem Öffentlichen funktioniert nur dann wenn man im Besitz des richtigen Privaten ist. Deswegen ist es wichtig den Privaten Schlüssel versteckt bei sich zu behalten um sicher zu gehen dass er nicht in falsche Hände gerät (oder irgendwelchen anderen ausser den eigenen).</p>
+<div class="dividertwo"></div>
+<h4>Der öffentliche Schlüssel muss dem richtigen Empfänger gehören</h4>
+
+<p>Ein kritischer Punkt mit dem Öffentlichen zu Verschlüsseln ist die Zuweisung des Schlüssels.
+<div class="dividertwo"></div>
+<p>Die Verschlüsselung von Mails mit dem Öffentlichen ist nur dann wirklich sicher wenn der Absender der Verschlüsselten Nachricht sicher sein dann dass der Öffentliche dem richtigen Empfänger zugewiesen ist. Dritte könnten einen öffentlichen Schlüssel mit dem Namen des Empfängers erstellen sie dem Absender geben, der den Schlüssel verwendet, um wichtige Informationen in verschlüsselter Form zu senden. Die verschlüsselte Nachricht somit wieder abgefangen werden, und da sie mit ihrem öffentlichen Schlüssel erzeugt wurde, diese ohne Probleme mit ihrem Privaten Schlüssel wieder zu entschlüsseln und die wichtigen Informationen preis geben.</p>
+<div class="dividertwo"></div>
+<h4>Deshalb ist es zwingend erforderlich, dass ein öffentlicher Schlüssel entweder an Dich persönlich gegeben <del>oder von einer Zertifizierungsstelle zugelassen</del> wird.(Das CA-Modell ist unbrauchbar für diesen Zweck.)</h4>
+<div class="dividertwo"></div>      
+<h3><a href="https://en.wikipedia.org/wiki/Web_of_trust" target="_blank">Netz des Vertrauens</a></h3>
+<p>Das 'Web of Trust' Konzept ist vom PGP Entwickler Phil Zimmermann im Jahr 1992 in der Anleitung für die PGP Version 2.0:</p>
+<p>
+      Im Laufe der Zeit werden sich Schlüssel von anderen die ihr als Vertrauenswürdig haltet ansammeln. Jeder wählt diejenigen selbst aus, denen er Vertrauen möchte. Nach und nach sammeln sich viele Schlüssel an und werden verteilt, erhalten mehrere Zertifikate auf ihren Schlüssel etc. Dadurch entsteht ein Dezentrales Fehler-Tolerantes Netz in dem viele Öffentliche Schlüssel vertrauenswürdig sind.</p>
+<p>Für weitere Informationen über Web of Trust, bei Problemen oder wie man eine solches aufbauen kann unter <a href="http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html" target="_blank">http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html</a>
+    </p>
+    <div class="dividertwo"></div>
+<h4>Signieren von vertrauenswürdigen Kontakten</h4>
+<p>Wenn öffentliche Schlüssel mit vertrauten Personen getauscht werden, könnt ihr ganz Sicher sein mit wem ihr es zu tun habt. Zum 'Signieren' (Unterzeichnen) von anderen Schlüsseln wird der eigene Schlüssel verwendet. Dies Hilft dabei, das Netz des Vertrauens aufzubauen und beseitigt Probleme von 'Mann in der Mitte' Zugriffen oder das Abfangen und Entschlüsseln der Nachrichten durch Dritte.</p>
+<div class="dividertwo"></div>
+<h3>Software Lösungen<a id="soft"></a></h3>
+<p>PGP ist das Original Verschlüsselungs Paket. PGP steht für Pretty Good Privacy. PGP ist ein Privates Unternehmen das zu Symantec gehört und ist ein Produkt dass durch Beiträge finanziert wird. Die kostenlose Version davon ist GPG (GnuPrivacyGuard), und ist für die meisten Betriebssysteme verfügbar. Beide basieren auf dem OpenPGP Standard und sind Kompatibel.</p>
+<div class="dividertwo"></div>
+ <h4><a href="http://www.gnupg.org/" target="_blank" id="gpg">Gnu Privacy Guard</a></h4>
+ <p>GnuPG ist das GNU Projekt, die komplette und freie Implementierung des OpenPGP Standards im RFC4880 Format. GnuPG erlaubt euch Daten und Nachrichten zu Verschlüsseln und zu Signieren, eine vielseitige Schlüsselverwaltung und Zugriffsmöglichkeiten für alle arten von öffentlichen Schlüsselverzeichnissen. GnuPG, besser bekannt als GPG, ist ein Kommandozeilen-Werkzueg mit der Fähigkeit zur Kombination mit anderen Programmen. Viele Frontend-Anwendungen und Bibliotheken sind verfügbar. Version 2 von GnuPG unterstützt S/MIME.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://www.enigmail.net/home/index.php" target="_blank" id="enig">Das EnigMail Projekt</a></h4>
+<p>Enigmail ist eine Sicherheits Erweiterung für Mozilla Thunderbird und Seamonkey. Es ermöglicht E-Mails die mit dem OpenPGP Standart Signiert oder Verschlüsselt sind zu Empfangen oder zu Versenden. Senden und empfangen verschlüsselter E-Mails sind mit Enigmail super einfach. Beim ersten Starten werdet ihr durch die Grundlagen für das Konfguieren begleitet und es steht ein Leitfaden für neue Nutzer zur Verfügung in dem die richtige Handhabung von OpenPGP erklärt wird. Enigmail ist für jedes System geeignet für das Mozilla Produkte verfügbar sind.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://www.enigmail.net/documentation/quickstart.php">EnigMail Schnellstart Leitfaden</a></h4>
+<div class="dividertwo"></div>
+<h4><a href="http://www.claws-mail.org/" target="_blank" id="claws">Claws Email</a></h4>
+<p>Claws Mail ist ein benutzerfreundliches, platzsparendes, und schnelles E-Mail Programm für Windows und Linux Variationen. Es enthält das GPGME Plugin und ist die ready-to-go Lösung. Das Aussehen und die Schnittstellen sind ähnlich den bekannteren Mailing-Programmen. Gut für neue Nutzer ebenso wie für Profis. Nahezu alle Befehle sind mit der Tastatur aufrufbar. Die Nachrichten werden im Standard MH Format gehandhabt, welche schnellen Zugriff und Daten-Sicherheit erlaubt. Es ist im stande E-Mails von anderen Programmen zu Importieren und zu Exportieren. Ein ganzer haufen Extras wie RSS, Kalender, oder Laptop LED Einstellungen werden als Plugins angeboten. </p>
+<div class="dividertwo"></div>
+<h4><a href="http://gpg4win.org/" target="_blank" id="gpg4">Gpg4win</a></h4>
+<p>Gpg4win läuft auf Windows XP, Vista und 7. Sowohl 32 als auch 64bit Systeme werden unterstützt. Das Outlook Plugin GpgOL verträgt sich mit Microsoft Outlook 2003 und 2007. Outlook 2010 ist leider nicht Kompatibel.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://sourceforge.net/projects/gnupgk/" target="_blank" id="gnup">GnuPGk - Windows Shell GUI für GPG</a></h4>
+<p>Ein wie GnuPG aussehendes GUI geschrieben in C#. Es ist Kompatibel mit PGP und stellt sich als nützliches Werkzeug für Ent-und Verschlüsselung raus. Eine nützliche Shell-Erweiterung ist integriert um mit rechtsklick zu Verschlüsseln als auch zu Entschlüsseln.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://ppgp.sourceforge.net/" target="_blank" id="ppgp">Tragbares PGP</a></h4>
+<p>Portable PGP ist ein komplettes, leichtgewichtiges, auf Java basierendes, kostenloses PGP Werkzeug. Erlaubt die Entschlüsselung, Verschlüsselung, Unterzeichnung und Nachweis für Text und Dateien mit einer schönen und absolut übersichtlichen Oberfläche. Die Handhabung ist sehr einfach und beinhaltet alles benötigte für die PGP Kryptographie.<br />
+Ausführbar unter Oracle Java 7, Windows 7 x64 und Ubuntu (x64) OpenJDK. Für den USB Stick.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://gpgtools.org//" target="_blank" id="gpgt">GPG Tools - Ein komplett Set für Macs, das Apple Mail integriert</a></h4>
+<p>Benutzt GPG Suite um Dateien oder Nachrichten zu Entschlüsseln, Verschlüsseln, Unterzeichnen und Verifizieren und ihr könnt den GPG Schlüsselbund mit ein paar Klicks verwalten. Erfahrt die ganze Kraft von GPG dazu noch Kinderleicht in der Handhabung. Für OSX 10.6+.</p>
+<div class="dividertwo"></div>
+<p>Wenn ihr GPG Tools und das Enigmail Plugin downloadet, benutzt idealerweise entweder Apple Mail oder Mozilla Mail (Thunderbird, Seamonkey).</p>
+<div class="dividertwo"></div>
+<h3>Schnellstart Leitfaden<a id="quick"></a></h3>
+<p>->Verschlüsseln auf einem bereits bestehenden E-Mail Account: Thunderbird mit Enigmail; Mac Mail mit GPGTools; Outlook mit GPG4Win.</p>
+<p>->Für Windows oder Linux: nehmt Thunderbird mit dem Enigmail Plugin, oder Claws Mail mit eingebundenen GPGME.</p>
+<p>->Für Mac: Installiere GPG Tools, dann nutzt Apple Mail, oder Thunderbird mit dem Enigmail Plugin.</p>
+<p>Weitere Informationen im Inhalt und für ein Rundgang über Thunderbird/Enigmail/GPG besucht bitte <a href="https://securityinabox.org/en/thunderbird_main" target="_blank">Security in-a-box.</a>
+<div class="dividertwo"></div>
+<h3><a href="http://www.theregister.co.uk/2013/08/22/guardian_snowden_advice" target="_blank">Den GPG Schlüssel so sicher wie nur möglich Einstellen.</a></h3>
+<p>Nutzt was die NSA benutzt! Von einem Artikel aus theregister.co.uk.</p>
+<div class="dividertwo"></div>
+<h3>Zusätzliche Programme<a id="more"></a></h3>
+<div class="dividertwo"></div>
+<h4><a href="http://ipgmail.com/" target="_blank">iPGMail - PGP für iOS</a></h4>
+<p>iPGMail ist eine iPhone/iPad App zum Senden von PGP verschlüsselten Nachrichten.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://itunes.apple.com/us/app/opengp/id414003727?mt=8" target="_blank">oPenGP - </a></h4>
+<p>oPenGP ist eine Lösung zur Unterstützung für OpenPGP Standard (RFC 4880) auf dem iOS Gerät. Voll Kompatibel mit GPG & PGP® Desktop Software.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://www.thialfihar.org/projects/apg/" target="_blank">Android Privacy Guard (APG) - ein Android GPG Client</a></h4>
+<p>Auszug aus der Website: "Zur Zeit gibt es keine Verschlüsselung für Android mit Öffentlichem Schlüssel, für manche von uns ist dies jedoch Wichtig. APG versucht diese Lücke zu schliessen, mit einigen neuen, kürzlich hinzugefügten Funktionen. Hoffentlich wird APG eine voll Funktionsfähige OpenGPG Umsetzung, das den GPG oder PGP Kalibern gewachsen ist." APG läuft unter <a href="http://code.google.com/p/k9mail/" target="_blank">K-9 Mail.</a></p>
+<div class="dividertwo"></div>
+<h4><a href="https://countermail.com/" target="_blank" id="webmail">Countermail</a></h4>
+<p>Countermail ist ein Swedischer Webmail Provider mit integrierter GPG Unterstützung. Mails werden auf dem PC Verschlüsselt bevor sie versendet werden, und andersrum genauso. Akzeptieren Bitcoins. Extrem Sicher, Schutz gegen man-in-the-middle (MITM) Angriffe, USB Schlüssel Option.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://shazzlemail.com/" target="_blank">Shazzlemail - Privatsphärenschutz und
+Überwachungsresistenter Sicherheits E-Mail Service.</a></h4>
+<p>ShazzleMail ist eine kostenlose Smartphone (iOS und Android) App die dir erlaubt Private E-Mails zu jedem aus der Kontaktliste zu schicken. Ihr könnt ShazzleMail ebenso auf dem Laptop oder Desktop PC mit einem Mail-Clienten verwenden der POP/SMTP unterstützt, inclusive Microsoft Outlook. ShazzleMail sendet jegliche Kommunikation über eine sichere Verbindung, und speichert die E-Mail Lokal- und nicht auf einer Cloud. Der Firmensitz befindet sich in Braintree, Massachusetts, US.</p>
+<div class="dividertwo"></div>
+<h4><a href="https://crypto.cat/" target="_blank">Cryptocat</a></h4>
+<p>Sicheres Web Chatten.</p>
+<div class="dividertwo"></div>
+<h4><a href="http://safetyjabber.com/" target="_blank">SafetyJabber</a></h4>
+<p>Jabber Client mit integrierter PGP Verschlüsselung für Windows, Mac, und iOS. Eine kostenlose Version steht zum Download bereit.</p>
+<div class="dividertwo"></div>
+<h3>GPG mit Gmail und anderen Mail Providern Kombinieren</h3>
+<p>Es gibt keine Plugings die GPG innerhalb von Webmail unterstützen die auf dem neuesten Stand, Unterstützt oder richtig Sicher sind. Jedes Plugin basiert auf einer Webmail Lösung wo man den Text eingibt und einen Knopf drückt um die Nachricht zu Verschlüsseln ist Nutzlos. Dies wird nicht empfohlen. Wenn ihr Webmail benutzt und eine sichere Verschlüsselung benötigt müsst ihr zunächst die Nachricht in Notepad oder einem anderen Text Editor eingeben, mit GPG auf ASCII-Code verschlüsseln, und danach erst in das Eingabefeld einfügen.</p>
+<div class="dividertwo"></div>
+<p><em>Ausländische Geheimdienst Organisationenen nutzen das Internet um versteckt und klammheimlich zu Kommunizieren ohne erkannt zu werden, und ihr könnt das auch. Glaubt nicht dass die NSA oder DOJ übermächtig ist. Sie haben keine Superkräfte und können bezwungen werden.</em></p>
+ 
+	<div id="footer"><!--Footer Begins -->
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/encryption.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->  
+</body>
+
+<!-- Mirrored from newblood.anonops.com/de/securemail.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+</html>

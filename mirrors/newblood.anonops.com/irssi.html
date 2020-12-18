@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/irssi.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:03 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>IRC Clients Irssi</title>
+	<meta name="description" content="irssi tutorial" />
+	<meta name="keywords" content="anonops irc, anonops, irssi, client, tutorial, anonymity, anonymous, ops, operations, newblood, basic, irc, noob, webchat, security, vpn, guide" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+   
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/>
+<h1>irssi IRC Client for Linux</h1></div>
+<div class="dividerthree"></div>
+<p>This tutorial uses Debian as an example. The procedure is similar for other distros.<br />
+To begin, we first need the application. Open up a terminal and use your package manager and place it in the path of your choice.<br>
+Your package manager should have installed SSL. If not, do so now.</p><br />
+<strong>sudo apt-get install irssi</strong><br />
+Next, run the program. In the terminal type:<br>
+<strong>irssi</strong><br />
+<img src="images/irssism.png" alt="" /><br />
+Click <a href="images/irssi.png" target="_blank"><strong>here</strong></a> for a larger image.<br />
+This first run is done not only to test the program installed correctly but also to create the <cite>.irssi</cite> in the users home directory.<br />
+Type <strong>exit</strong> to close the program.
+<div class="dividerthree"></div>
+Next, we configure the client to connect to AnonOpsIRC. This is done by editing the configuration file with your favorite editor, which is of course, nano.<br />
+<strong>nano ~/.irssi/config</strong><br />
+The examples shown are copied from a working irssi client. You can copypasta them into your config file then save it.<br> 
+<strong>NOTE: You need to replace <cite>YOURNICK</cite> and <cite>YOURPASSWORD</cite> with your own information.</strong><br />
+First we want to add the servers:
+<div class="dividerthree"></div>
+<pre>servers = (
+  {
+    address = "irc.anonops.com";
+    chatnet = "AnonOps";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
+);</pre>
+<div class="dividerthree"></div>
+Next, we add the network and define a few things:<br />
+<div class="dividerthree"></div>
+<pre>chatnets = {
+  AnonOps = {
+    type = "IRC";
+    nick = "YOURNICK";
+    autosendcmd = "/msg nickserv identify <b>YOURPASSWORD</b>; wait 2000";
+  };
+};<br />
+channels = (
+  { name = "#anonops"; chatnet = "AnonOps"; autojoin = "yes"; },	
+);</pre>
+<div class="dividerthree"></div>
+You have now set the network to join, saved your nick and password and set to autojoin the main channel.<br />
+You can edit this section later to add additional channels to autojoin on connect.<br>
+Next we will add some aliases. Aliases are shortened versions of standard IRC commands.<br />
+<div class="dividerthree"></div>
+The configuration information below is available to download <a href="irssi.conf" target="_blank"><strong>here</strong></a>. Just append it to the existing file using nano.
+<div class="dividerthree"></div>
+<pre>aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  CALC = "exec - if command -v bc >/dev/null 2>&amp;1\\; then printf '%s=' '$*'\\; echo '$*' | bc -l\\; else echo bc was not found\\; fi";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  EXEMPTLIST = "mode $C +e";
+  ATAG = "WINDOW SERVER";
+  UNSET = "set -clear";
+  RESET = "set -default";
+};</pre>
+<div class="dividerthree"></div>
+This section controls the look of the client window and the status bars. You can modify these later to suit your preferences.<br />
+<pre>statusbar = {
+  # formats:
+  # when using {templates}, the template is shown only if it's argument isn't
+  # empty unless no argument is given. for example {sb} is printed always,
+  # but {sb $T} is printed only if $T isn't empty.
+
+  items = {
+    # start/end text in statusbars
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+
+    # treated "normally", you could change the time/user name to whatever
+    time = "{sb $Z}";
+    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+
+    # treated specially .. window is printed with non-empty windows,
+    # window_empty is printed with empty windows
+    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = " Irssi v$J - http://www.irssi.org";
+
+    # all of these treated specially, they're only displayed when needed
+    lag = "{sb Lag: $0-}";
+    act = "{sb Act: $0-}";
+    more = "-- more --";
+  };
+
+  # there's two type of statusbars. root statusbars are either at the top
+  # of the screen or at the bottom of the screen. window statusbars are at
+  # the top/bottom of each split window in screen.
+  default = {
+    # the "default statusbar" to be displayed at the bottom of the window.
+    # contains all the normal items.
+    window = {
+      disabled = "no";
+
+      # window, root
+      type = "window";
+      # top, bottom
+      placement = "bottom";
+      # number
+      position = "1";
+      # active, inactive, always
+      visible = "active";
+
+      # list of items in statusbar in the display order
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # statusbar to use in inactive split windows
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # we treat input line as yet another statusbar :) It's possible to
+    # add other items before or after the input line item.
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      # we want to be at the bottom always
+      position = "100";
+      visible = "always";
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        # treated specially, this is the real input line.
+        input = { priority = "10"; };
+      };
+    };
+
+    # topicbar
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+settings = {
+  core = { real_name = "SomeNameHere"; user_name = "<b>YOURNICK</b>"; nick = "<b>YOURNICK</b>"; };
+  "fe-text" = { actlist_sort = "refnum"; };
+};</pre>
+Save the config file now.
+<div class="dividerthree"></div>
+Wow. so config. many lines. much confusion.<br />
+Now to run the program. In the terminal type <strong>irssi</strong><br>
+Your terminal should look like this:<br />
+<img src="images/irssi2sm.png" alt="" /><br />
+Click <a href="images/irssi2.png" target="_blank"><strong>here</strong></a> for a larger image.<br>
+Everything look ok? Good. You have done well.<br>
+To cycle through the different channels you enter the /win command followed by the number of that window.<br>
+/win 1<br>
+/win 2<br>
+/win 3<br>
+Etc, etc. Note that irssi can have up to 14 channels opened at once. Each number represents a different channel.<br>
+
+You can also change windows by pressing <cite>ALT + (1-9)</cite>. Using <cite>ALT + 0</cite> displays window 10.<br>
+From there, <cite>ALT + (q-p)</cite> cycles thru windows 11-20. 
+If you have any problems, first google any errors or read the documentation.<br />
+If you still need help, join #opnewblood from <a href="https://webchat.anonops.com/" target="_blank"><strong>webchat</strong></a>
+<div class="dividertwo"></div>
+<div class="center">
+<pre>Tutorial and images by Riotday</pre>
+<pre>Edits and HTML by elmo</pre>
+</div>
+	<div id="footer"><!--Footer Begins -->
+	<h2 class="center"><a href="index-2.html">Back to the OpNewblood main page</a></h2>
+	<div class="dividerthree"></div>
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/irssi.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/irssi.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:11 GMT -->
+</html>
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/de/tor.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Tor - #OpNewblood</title>
+	<meta name="description" content="AnonOps Newblood Tor Information" />
+	<meta name="keywords" content="anonymous tor, tor, anonymous irc, torbrowser, tails, torproject, orbot, tor android" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/><br />
+<h1>Tor - Information und ähnliche Software</h1>
+</div>
+<div class="dividertwo"></div>
+
+<ul class="menu2">
+<li><a href="#tor" target="_self">Tor</a></li>
+<ul>
+<li><a href="#how" target="_self">Wie funktioniert Tor?</a></li>
+<li><a href="#advdis" target="_self">Vorteile und Nachteile</a></li>
+<li><a href="#anonops" target="_self">Tor und AnonOps</a></li>
+</ul>
+<li><a href="#tbb" target="_self">Tor Browser Bundle (TBB)</a></li>
+<li><a href="#tails" target="_self">TAILS</a></li>
+<li><a href="#orbot" target="_self">OrBot - Tor für Android</a></li>
+<li><a href="#conc" target="_self">Zusammenfassung und Fazit</a></li>
+</ul>
+
+<div class="dividertwo"></div>
+<img src="images/mask.png" alt="" class="center"/>
+<div class="dividerthree"></div>
+
+<a id="tor"></a>
+<h2>Tor</h2>
+<p>Das Tor (oder auch das Onion Router) Netzwerk ist ein Mittel um die Daten des Internetverkehrs entweder durch einen Exit-Node-Router (wobei die Daten durch den Ausgangsrouter in das öffentliche Internet gelangen) oder zu einem Hidden Service/Seite (sog. versteckter Dienst) welcher vom Netzwerk selbst aufrecht erhalten wird. Die gesamten Daten werden durch einen 'nicht bekannten' Router Kreis geleitet, wobei jeder Router nur denjenigen davor kennt der die Anfrage stellt und an den er die Daten weiterleiten muss, dadurch kann keine vollständige Liste der Router erstellt werden durch die der Verkehr geleitet wird. Das Netzwerk beinhaltet Ende-zu-Ende Verschlüsselung aber nur innerhalb des Netzes: werden also die Daten nicht zuvor Verschlüsselt wird jede Person die eure Daten am Ausgangsrouter abfängt, in der Lage sein zu sehen wohin ihr euch Verbindet und was ihr dort macht.<br />
+
+<div class="dividerthree"></div>
+
+<a id="how"></a>
+<h4>Wie funktioniert Tor?</h4>
+<p>Wenn Tor startet, befragt es einen Tor-Verzeichnisserver um eine Liste der verfügbaren Ausgangsknoten aufzurufen. Als nächstes bildet Tor eine Kette von Routern in dem er diese der Liste entnimmt und erstellt Verschlüsselungsnummern für jeden Router den eure Daten durchlaufen. Wie das Wort "onion (en. für Zwiebel)" bereits sagt, schleust Tor die zu Verschlüsselnden Daten durch die Software und fügt weitere Schichten zur Verschlüsselung durch jeden weiteren Router der Kette hinzu. Wenn eure Daten die Route entlang des Netzwerks gehen, wird ein Teil aufgegriffen um herauszufinden wohin die Daten als nächstes gehen sollen, und jeder Knoten sieht nur den davor und den nächsten Router in der Kette. Dadurch bis Zeit und Daten den Ausgangsknoten erreicht haben, gibt es keine möglichkeit Einzugsehen woher die Daten kommen und wohin sie geographisch gehen. Nach der ganzen Prozedur werden die Daten an das "Clearweb" geschickt, das Internet ausserhalb der Tor-Services. Wie zuvor erwähnt, wenn ihr eure Daten nicht sicher Verschlüsselt (mit SSL auf Port 6697 für IRC z.B.) und sie den Ausgangsknoten erreichen können sie durch Dritte abgefangen werden.</p>
+<p>Deswegen ist es WICHTIG dass mit VPNs zum Beispiel verschlüsselte Protokolle für jeden Login verwendet werden (irgendwelche Email Accounts, gefälschte Facebook Accounts etc.) und BESUCHT KEINE Seiten und auch KEINE ACCOUNTS die Aufschluss über eure Identität geben könnten, desweiteren verwendet keine Account Namen die ihr ausserhalb des TOR oder VPN Netzes nutzt! Weitere Informationen/Dokumentationen (grundlegendes) könnt ihr auf der <a href="https://www.torproject.org/">Tor Webseite</a> finden.</p>
+
+<div class="dividerthree"></div>
+
+<a id="advdis"></a>
+<h4>Vorteile und Nachteile</h4>
+<p>Tor gewährt Anonymität– das ist die Aufgabe von TOR. Wenn ihr Tor nutzt, nicht wie bei einem VPN, vertraut ihr keinem Institut die eure Informationen mitschreiben könnten auch wenn diese dies Abstreiten. Die Methodik von Tor ist dass jeder Server durch den eure Daten geleitet werden kein Zugriff darauf haben. Ein Ausgangs Knoten könnte eure Daten abfangen, aber wenn ihr Tor richtig nutzt mit anderen Prinzipien der Sicherheit (Verschlüsselung, vorsichtiges Verhalten wie schon beschrieben) werden die abgefangenen Daten nutzlos für den Abfänger!  Ein weiterer positiver Vorteil von Tor ist es dass es in einem Benutzer-Freundlichen Paket geladen werden kann (das Tor Browser Bundle, siehe unten) das eine gutes und einfaches Einstellen für den Endnutzer gewährt. Für Nutzer in Ländern in denen Methoden wir Tor verpönt werden, bestehen weitere Wege, bekannt als "steckbare Transporte", welcher die Daten von Tor als Daten von anderer Software tarnt (siehe <a href="https://www.torproject.org/docs/pluggable-transports.html.en">hier</a> für weitere Informationen über solch ein Verfahren).</p>
+<p>Jedoch hat Tor auch Einschränkungen, welche die Ersteller und Entwickler stark betonen dass dies Nutzern bewusst werden muss und dementsprechend Handeln. Manche Methoden und Besonderheiten um Tor auf Geräten nutzen zu können sind zum Versuch gedacht (angegeben auf entsprechender Seite). Tor benötigt mehr Achtsamkeit und Aufwand um sicher in der Handhabung sein zu können, wobei gemeint ist dass Kompromisse geschlossen werden müssen im Sinne der Sicherheit um die Daten Verschlüsseln zu können. Das zwingt so manchen Nutzer einige Funktionen abzuschalten oder zusätzliche Programme zu installieren, dass keine Sicherheitslücken in ihren Systemen entstehen. Tor Nutzer merken des öfteren, manchmal sehr deutlich dass die Verbindungsgeschwindigkeit zum Server durch Lags im Netzwerk gekennzeichnet sind, dies hat sich jedoch bereits in der Vergangenheit über längere Zeit hinweg gesehen stark verbessert.</p>
+
+<div class="dividerthree"></div>
+
+<a id="anonops"></a>
+<h4>Tor und AnonOps</h4>
+<p>Das AnonOps IRC Netzwerk erlaubt Zugang durch einen Tor Hidden Service Server auf dem die Benutzer manuell von den Netzwerk-Administratoren hinzugefügt werden müssen, aber nur bei entsprechenden Vorbereitungen die von Nutzern getroffen werden MÜSSEN. Einfaches verbinden zu einem Standard-Server auf dem Webchat zum IRC Netzwerk wird eine Fehlermeldung über eine fehlgeschlagene Verbindung hervorbringen. Um euch auf die Tor Zugangsliste zu setzen, werden Netzwerkadministratoren hinterfragen ob ein Nutzer einen registrierten Nicknamen hat und für mindestens 3 Tage aktiv Teil genommen hat um zu sehen dass ein generelles Interesse besteht. Der Nutzer wird ebenfalls ein Grundwissen über die Handhabung der Kommandos auf dem IRC Netwerks benötigen welcher die korrekte Identifizierung im Format "nick!ident@host" hat und verstehen was die einzelnen Teile beschreiben. Wenn diese Vorbereitungen und die nötigen Verständnisse WIRKLICH vorhanden sind kann ein Nutzer den #help Kanal betreten um Zugang über Tor zu erhalten. Admins in dem Kanal werden euch einschätzen; wenn sie der Meinung sind ihr könnt dem nicht Adäquat nachkommen und habt keine Kenntnis darüber werdet ihr nicht hinzugefügt. Anders als bei beispielsweise anderen Themen ist das Einrichten und Konfiguieren des IRC Klienten um über Tor zu funktionieren eher etwas für Fortgeschrittenere über das sich das benötigte Wissen jeder Nutzer selbst aneignen sollte und Schritt für Schritt Hilfe somit generell nicht gewährleistet werden kann.</p>
+
+<a id="tbb"></a><br></a>
+<h3>Tor Browser Bundle (TBB)</h3>
+<p>In jüngster Zeit wurde ein komplett Paket entworfen welches den Firefox mit eingebundenen Tor Komponenten beinhaltet. Es beinhaltet ebenso nützliche Plugins die primär Wert auf Privatsphäre im Internet legen. TBB läuft als eigene Instanz, d.h. es wird aus dem Ordner in den es extrahiert wurde ausgefüht, welches sich als Mobile-Version wunderbar anbietet (und unabhängig überall vom USB Stick ausgeführt werden kann). Für weitere Informationen über das TBB, (entlang der Standard Tor Nutzerinformationen) und für den Erwerb einiger GRUNDLEGENDER Kenntisse für jeden der dies verwendet besucht einfach die <a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser Bundle</a> Webseite.</p>
+<div class="dividerthree"></div>
+
+<a id="tails"></a>
+<h3>TAILS</h3>
+<p>Tails ist eine komplette Linux-Distribution mit Anonymität und Privatsphäre im Vordergrund, welches eine Internetverbindung ausschliesslich über Tor verwendet, desweiteren beinhaltet es Methoden um digitale Forensictechniken zu verhindern, und macht die Nutzerdaten so sicher wie möglich durch starke Verschlüsselungen. Es wurde zur Benutzung als tragbare Version via USB/Live CD entworfen und is nicht für die Installation auf einer Festplatte gedacht. Für eine tiefgreifendere Erklärung besucht die <a href="https://tails.boum.org/">TAILS Webseite.</a></p>
+
+<div class="dividerthree"></div>
+
+<a id="orbot"></a>
+<h3>OrBot - Tor für Android</h3>
+<p>Orbot ist eine TOR implementierung für Android Systeme, welches den ganzen Verkehr der Apps durch das Tor Netzwerk leitet (ausgenommen davon sind non-VoIP Telefonate).  Es gibt Apps die für die Benutzung mit Orbot empfohlen werden, wie z.B. Orweb (Internet Browser) und ChatSecure (Instant Messenger). Weitere Informationen <a href="https://guardianproject.info/apps/orbot/">hier.</a></p>
+<div class="dividerthree"></div>
+
+<a id="conc"></a>
+<h2>Zusammenfassung und Fazit</h2>
+<ul>
+<li>Tor gewährt Anonymität, es gewährt aber keine Privatsphäre.</li><br>
+<li>Tor Browser Bundle ist ein einfacher Weg um einen ersten Schritt mit Tor zu wagen (voreingestellt).</li><br>
+<li>Einstellungen von Tor ausserhalb des Tor Browser Bundles erfordert eine selbst-einweisung in die Materie und erlaubt keine Sicherheitslöcher. Eher für Fortgeschrittenere.</li><br>
+<li>Die Nutzung von Tor erfordert den strikten und sensiblen Umgang mit Daten (benutzung verschlüsselter Protokolle, ein Nutzer darf keine Accounts innerhalb und ausserhalb Tor mischen/teilen) und die Nutzererfahrung kann vermindert werden durch diese Erforderlichkeiten.</li><br>
+<li>Einige Plugins sind für Tor verfügbar allerdings nur experimentell.</li>
+</ul>
+<p>Zusammen gefasst ist Tor ein nützliches Werkzeug wenn es ordnungsgemäß gehandhabt wird. Wenn die größe des Tor-Netzes wächst, erhöht dies zugleich Stabilität und die Redundanz erhöht sich, meinstens zu Dank der stetig wachsenden Zahl der Freiwilligen und ihren Servern. Trotz all den Sicherheitsprinzipien, ist es besser Tor mit anderen Programmen die Sicherheit und Anonymität Online gewähren zu verwenden. Denkt daran, dass 1) Nichts zu 100% sicher ist da neue Angriffspunkte mit Software gefunden werden können und 2) wenn ihr es verwendet der Empfänger auch an seine eigene Sicherheit denken sollte; je mehr Zeit ihr in Recherche der Verschlüsselungsmethoden investiert, umso besser wird eure Datensicherheit sein.</p>
+
+<div class="dividerthree"></div>
+
+<h3>Viel Erfolg!</h3>
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+<div class="dividerthree"></div>
+	<div id="footer"><!--Footer Begins -->
+	<h2 class="center"><a href="../index-2.html">Zurück zur OpNewblood Hauptseite</a></h2>
+	<div class="dividerthree"></div>
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/vpn.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/de/tor.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:47 GMT -->
+</html> 

@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/fr/securite.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:43 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Manuel de Sécurité</title>
+	<meta name="description" content="Security" />
+	<meta name="keywords" content="anonops irc, anonops, join, anonymity,anonymous, ops, operations, newblood, basic, irc, noob, webchat, security, vpn, guide" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+   
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/>
+<h1><font color="#990000">Le super manuel de sécurité de #OpNewblood.fr</font></h1>
+<div class="dividerthree"></div>
+<pre>Si vous n'avez pas terminé de configurer le client de chat de votre système d'exploitation</pre>
+<pre>nous vous recommendons de revenir à l'étape précédente et recommencer</pre>
+</div>
+
+<ul class="menu">
+<li><a href="#pre" target="_self">Préface</a></li>
+<li><a href="#tor" target="_self">Installation de Tor</a></li>
+<li><a href="#ffadd" target="_self">Les addons de firefox sont recommendés</a></li>
+<!-- <li><a href="#i2p" target="_self">Installation de i2p</a>
+<ul>
+<li><a href="#inst" target="_self">Installation</a></li>
+<li><a href="#ffc" target="_self">Configuration de Firefox</a></li>
+<li><a href="#ircc" target="_self">Configuration d'un Client IRC</a></li>
+<li><a href="#irca" target="_self">I2p IRC sur Android via irssi</a></li> 
+</ul>
+</li> -->
+<li><a href="#adt" target="_self">Les addons de firefox sont recommendés</a></li>
+<li><a href="#gpg" target="_self">Les Bases de l'Encryption de Courriels</a></li>
+<li><a href="#port" target="_self">Solutions Portable </a></li>
+<li><a href="#guide" target="_self">Guide avancé</a></li>
+</ul>
+<div class="dividertwo"></div>
+
+<h2>Preface<a id="pre"></a></h2>
+NOTE: Si à tout moment vous avez besoin d'aide avec n'importe quel sujet dans ce guide, n'hésitez pas à venir nous voir sur https://webchat.anonops.com/ et rejoignez nous sur #OpNewblood.fr, vous trouverez quelqu'un pour vous aider à comprendre. Il convient de noter que ce guide peut contenirs des informations qui peuvent être difficile à comprendre sans une technique avancée et des connaissances des systèmes informatiques. Bien que ce guide utilise des termes simples pour les non-professionnels, vous devez prendre conscience de l'importance que vous êtes le seul responsable de votre propre sécurité et de vos systèmes.
+<div class="dividerthree"></div>
+
+<img src="images/mask.png" alt="" class="center"/>
+<h3>Configurer Tor<a id="tor"></a></h3>
+    Due à des abus de TOR dans le passé, les noeuds de sorties de TOR ne peuvent pas se connecter au serveurs IRC d'Anonops. Vous pouvez cependant vous connectez à notre service caché. Vous trouverez plus d'informations sur la page de tutoriels pour votre client à <a href="https://anonops.com/tutorials.html" target="_blank">https://anonops.com/tutorials.html</a>"https://anonops.com/tutorials.html
+<div class="dividerthree"></div>
+
+<h3>Windows</h3>
+<ol>
+<li>Télécharger <a href="https://www.torproject.org/">TOR</a>
+</li><li>Exécuter le  .exe
+</li><li>Extraire le ficher par défaut. Vous devriez avoir un fichier sur votre ordinateur nommée Tor Browser. Dans ce fichier il y a "Start Tor Browser.exe". Si vous voulez pouvoir créé un raccourci, faite click-droit et glisser le ficher sur votre bureau, assurez-vous que e fichier original reste dans le même fichier. 
+</li><li> Cliquer sur <a href="https://check.torproject.org/" target="_blank">TorProject</a> Cliquer sur pour vérifier que TOR fonctionne. Si votre FAI bloque votre connection à TOR ou que vous avez besoin de plus d'aide sentez vous libre de demander sur le salon de vous libre de #OpNewblood.fr, avec lequel vous pouvez accéder via le web à ce lien: <a href="http://webchat.anonops.com/" target="_blank">http://webchat.anonops.com</a>
+</li></ol>
+<div class="dividerthree"></div>
+
+<h3>Linux</h3>
+<ol>
+<li> Télécharger <a href="https://www.torproject.org/">TOR</a></li>
+<li>L'extraire de la destination de ton choix. La localisation par défaut est correcte.</li>
+<li>Vous devriez maintenant être capable de simplement cliquer sur TOR Browser pour débuter.</li>
+</ol>
+<div class="dividerthree"></div>
+
+<h3>Mac OSX</h3>
+<ol>
+<li>Télécharger <a href="https://www.torproject.org/">TOR</a></a>
+</li><li>Décompresser le ficher et glisser TorBrowserBundle_en-US.app dans votre dossier d'application(_en-US is the language suffix)
+</li><li>Double-cliquer sur TorBrowserBundle_en-US.app
+</li><li>Si vous avez des problèmes aller sur : <a href="https://www.torproject.org/docs/tor-doc-osx.html.en" target="_blank">https://www.torproject.org/docs/tor-doc-osx.html.en</a> pour plus d'informations.
+</li><li>Une fois de plus, pour avoir de l'aide pour faire un pont, si ton FAI bloque TOR, s'il-vous-plait, demander sur le salon de #Opewblood.fr via votre navigateur web <a href="https://webchat.anonops.com/" target="_blank">ici:</a>
+</li></ol>
+<div class="dividerthree"></div>
+
+<h4>UNE NOTE POUR TOUS LES SYSTÈMES D'EXPLOITATIONS</h4>
+<p>Il y a eu quelques changements dans la structure de Tor bundle, si vous avez besoin de configurer un relais ou d'autres options spéciales, il y a des instructions spécifiques sur : 
+    <p><a href="https://www.torproject.org/download/download.html.en" target="_blank">https://www.torproject.org/download/download.html.en</a>.</p>
+    <p> Une fois de plus, pour avoir de l'aide pour faire un pont, sit ton FAI bloque TOR, s'il-vous-plait, demander sur le salon de #Opewblood.fr via votre navigateur web <a href="https://webchat.anonops.com/" target="_blank">ici:</a></p>
+
+<p>Pour vérifier que tor fonctionne correctement, vous pouvez regarder <a href="https://check.torproject.org/" target="_blank">ici:</a></p>
+<h4>Pour dépanner, visiter le : <a href="../www.torproject.html" target="_blank"> https://newblood.anonops.com/www.torproject.org</a></h4>
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+
+<h2><h2><font color="#990000">Extensions FireFox</font><a id="adt"></a></h2><a id="ffadd"></a></h2>
+	<div class="dividerthree"></div>
+    <p>
+        <strong>Adblock Plus</strong>: Pop-Up Bloqueur: Les plug-in bloquent environ 90% des service d'Internet qui tentent de traquer vos activitées sur le web et ensuite d'envoyer vos informations à des publicité qui vous cibleront. Il est recommendé d'utiliser cet add-ons pendant que vous naviguer sur le web. Les informations chargées de ces serveurs publicitaires font des fuites à propos de vous. Ce n'est pas bien. Noter que les nouvelles version de ces add-ons aussi bloque plus d'image des médias sociaux que le boutton "j'aime " de facebook. Pour configurer les add-on pour les adapter selon vos besoins et d'autres formes de suivi Web
+        <a href="https://addons.mozilla.org/" target="_blank">addons.mozilla</a>
+    </p>
+         <div class="dividerthree"></div>
+<strong>NoScript</strong>:Un plugin très utile qui permet de désactiver le javascript ​​des sites pour protéger votre vie privée et empêcher toute activité malveillante. Les règles peuvent être définies par des sites individuels ou complètement ignorés. <a href="http://noscript.net/" target="_blank">Addons.NoScript</a>
+    <p>
+        <div class="dividerthree"></div>
+        <strong>Politique de Requête</strong>Être en contrôle de chacune des requêtes cross-site autorisées. Améliore la vie privée de votre navigateur sans laisser de trace sur d'autres sites pour qu'ils connaissent vos habitudes de navigation. S'auto-sécuriser des requête Cross-Site (CSRF) et autres attaques. en travaillant à côtés de NoScript
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/" target="_blank">Politique de Requête</a>
+    </p>
+        <div class="dividerthree"></div>
+        <strong>BetterPrivacy</strong>:Ce plugin est un outil qui permet d'identifier et de supprimer les cookies. Il agira également comme un "opt-out" publicitaire et d'autres formes de suivi Web <a href="https://addons.mozilla.org/en-US/firefox/addon/betterprivacy/" target="_blank">Addons.BetterPrivacy</a>
+    <p>
+        <div class="dividerthree"></div>
+        <strong>FoxyProxy</strong>: Un addon par défaut peut faire la connexion avec des proxy, l'addon FoxyProxy vous permettra d'avoir un accès plus facile à vos tunnels proxy, et dispose également de fonctionnalités avancées, telles que la création d'une liste des domaines que vous voudrai toujours utiliser un proxy pour vous connecter, et de le faire automatiquement, tout en utilisant une autre connexion pour des sites non-listés. <a href="https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/" target="_blank">Addons.FoxyProxy</a>
+    </p>
+     <div class="dividerthree"></div>
+        <strong>Ghostery</strong>:  Un plug-in pour aider à gérer et réduire les cookie de pistage, Ghostery permet d’être alerté quand il détecte des cookies de pistages. Vous pouvez également obtenir des informations à propos de chaque site qui récolte des données de navigation, et même voir la manière dont il utilise vos données directement dans le code source du site en question. Selectionner les listes Fanboy et Easy lors de l’installation (ou dans les paramètres du plug-in, si vous l’avez déjà installé) <a href="https://addons.mozilla.org/en-US/firefox/addon/ghostery/" target="_blank">Addons.Ghostery</a>
+    <p>
+        <div class="dividerthree"></div>
+        <strong>Greasemonkey</strong>: A plug-in qui permet d’éditer la façon dont les sites web s’affichent avec quelques bouts de code Javascript. Il faut le voir comme un plug-in du moteur Firefox ou comme une plateforme de développement, permettant d’écrire et télécharger des scripts pour faire beaucoup de choses différentes <a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/" target="_blank">Addons.GreaseMonkey</a>
+    </p>
+    <div class="dividerthree"></div>
+        <strong>HTTPS Everywhere</strong>:  Une extension Firefox créée en colaboration avec The Tor Project et Electronic Frontier Foundation. Son but est de forcer les connexion https sur chaques sites web. <a href="https://www.eff.org/https-everywhere" target="_blank">Addons.Https-Everywhere</a>
+    <p>
+        <div class="dividerthree"></div>
+        <strong>Secret Agent</strong>: Change et choisit au hasard le User Agent HTTP sur Firefox/SeaMonkey, afin de limiter le pistage. Protip: utiliser la touche Echap. pour fermer la fenêtre de préférences.<a href="https://www.dephormation.org.uk/?page=81" target="_blank">Addons.Dephormation</a>
+    </p>    
+    <div class="dividerthree"></div>
+        <img src="images/mask.png" alt="" class="center" />
+        <h2><font color="#990000">Techniques de Défence Avancées</font><a id="adt"></a></h2>
+    <p>
+        <div class="dividerthree"></div>
+        <h3><u>Utiliser des Machines Virtuelles</u></h3>
+        Il est est fortement recommandé de penser a faire une Machine Virtuelle (VM) afin de séparer votre système d'exploitation personnel et votre système d'exploitation anonymous. Ceci permet d'assurer que vos données personelles ne fuient pas lorsque vous consulter des réseaux sociaux en rapport avec anonymous, tel que Twitter ou Facebook.
+    </p>   
+     <div class="dividerthree"></div>
+        <h4>Logiciel de Machines Virtuelles</h4>
+        VirtualBox - x86 and x64<br />VMWare Workstation 7 - x86 and x64<br />Windows Virtual PC - x86<br />
+        Parallels Desktop - x86 and x64
+    <p>
+        <div class="dividerthree"></div>
+        <h3><u>Chiffrement de disque</u></h3>
+        Chiffrer son/ses disque(s) dur est un autre moyen de se protéger. Les logiciels de chiffrement de disque vont rendre la tâche très difficile à quiconque (autre que vous), tentererai d'acceder aux données de votre disque dur.
+    </p>   
+    <p>
+        <div class="dividerthree"></div>
+        <h4>Logiciels de chiffrement de disque:</h4>
+        - <a href="http://www.truecrypt.org/">TrueCrypt/</a><br />
+        - Bitlocker - (Win 7 Ultimate only)
+    </p>   
+     <div class="dividerthree"></div>
+        <a id="gpg"></a>
+        <h4><u>Chiffrement de fichiers et de mails</u></h4>
+<pre>(ajouté par cred)</pre>
+     <p>More on this subject is also found here at this <a href="../securemail.html" target="_blank"><strong>securemail</strong> link</a>.</p>
+        <div class="dividerthree"></div>
+     En utilisant le standard openPGP, les logiciels suivant créent un couple clef publique/clef privée pour vous liés a votre nom et mails (qui n'ont pas besoin d'être reel). La clef privée est protégée par un mot de passe, que vous garderez sur chaque ordinateur sur lequels vous souhaitez DECHIFFRER des informations: votre ordinateur personnel et  si vous être courageux, sur votre téléphone Android. La clef publique est utilisée pour CHIFFRER les informations ou fichiers et est accessible à n'importe qui. Ainsi, si vous souhaitez envoyer des informations chiffrées à Bob, vous devrez trouver sa clef publique, chiffrer les données avec cette clef, et les lui envoyer. Le seul moyen de déchiffrer ces données est d'utiliser la clef privée de Bob, il n'y aura donc que Bob qui sera capable de lire ce que vous avez envoyé. 
+    </p>
+    <p>Logiciels GPG</p> 
+    <p>
+         <a href="http://gpg4win.org/download.html"> GPG (Windows)</a><br />
+         <a href="https://gpgtools.org/">GPG (Mac)</a><br />
+         <a href="http://www.gnupg.org/">GPG (Linux)</a><br />
+         <a href="https://market.android.com/details?id=org.thialfihar.android.apg">APG (Android)</a>
+    </p>
+           <div class="dividerthree"></div>
+        <h3><a href="securemail.html">Chiffrement de couriel de base</a></h3>
+        <!-- <h4>Proxy Lists</h4>
+        <a href="http://www.freeproxies.org/">http://www.freeproxies.org</a><br />
+        <a href="http://www.socks24.org/">http://www.socks24.org</a><br />
+        <a href="http://www.samair.ru/proxy">http://www.samair.ru/proxy</a><br /> -->
+       
+     <div class="dividerthree"></div>
+        <h3>Linux TOR VM</h3>
+    Il est possible d'utiliser Tor comme un VPN à l'aide de quelques VM (machines virtuelles) linux préfaites. Une fois ces VM démarrées, il est possible de créer une connexion VPN aux VM Tor. Ces VM incluent quelques outils de vie privée tel que Squid et Privoxy.<br />
+        <br /><b>Logiciels VM Linux Tor:</b><br />- <a href="http://janusvm.com/">JanusVM </a><br />- <a href="https://amnesia.boum.org/">TAILS </a>
+       
+     <div class="dividerthree"></div>
+        <img src="images/mask.png" alt="guyfawkesmask" class="center" />
+        <h3><u>Solutions Portables</u><a id="port"></a></h3>
+    <p>
+        <div class="dividerthree"></div>
+        Portable se référe à un système d'exploitation indépendant qu'on peut utiliser a partir d'un CD, DVD ou d'un appareil USB. Ceci vous permet de transporter votre système d'exploitation anonymous partout avec vous et de l'insérer dans d'autres ordinateur et ainsi accéder aux ressoruces anonymous de manière sécurisée.
+    </p>
+        
+    <div class="dividerthree"></div>
+        <h4><a href="https://amnesia.boum.org/download/index.en.html">The Amnesic Incognito Live System:</a></h4>  bootable, live, distribution Linux dont le but principal est la sécurité et la propriété des données. 
+        
+    <div class="dividerthree"></div>
+        <h4><a href="http://www.kali.org/">Kali:</a></h4> Le successeur de BackTrack. Un couteau Suisse pour les tests d'intrusion
+
+        <div class="dividerthree"></div>
+        <h4><u><i><a href="https://www.privacy-cd.org/">Ubuntu Privacy Remix:</a></i></u></h4>Prévu uniquement pour le live booting. Aucune installation sur l'hôte n'est requise et aucune donnée de l'hôte n'est touchée.
+
+    <div class="dividerthree"></div>
+        <img src="images/mask.png" alt="" class="center" />
+        <h2>Guide Avancé<a id="guide"></a></h2>
+<pre>par Denizen</pre>
+        <div class="dividerthree"></div>
+        <h3><i>Préface:</i></h3>
+   <a>Les informations de cette section peuvent être très compliqués pour les nouveaux utilisateurs ou ceux sans les connaissances techniques neccessaires. Soyez toujours vigilant lorsque que vous jouez avec des systèmes que vous ne comprenez pas entierement, ceci pourrais vous amener à des résultats non désiré, risques de detection, où pire, une défaillance de vos système ou des problèmes avec la justice. Pour les interessé, un très bon guide pour les attaques par deni de service ou DDoS se trouve ici: (trouver un lien_) </a>
+    <p>
+        Guide écrit par: Denizen<br />Pour être un ultime "denizen", vous devez êtres capable de pénétrer un système de différentes manières. Il existe plusieur façon d'atteindre un site web; de vous proteger en terme d'anonymat, et de réduire les risques de vulnérabilité.
+        <div class="dividerthree"></div>
+        <h3><i>Sommaire</i></h3>
+        <ul>
+            <li>Technique de Tunnel SSH</li>
+            <li>VPN (Virtual Private Network)Techniques de division en sous-réseaux</li>
+            <li>Techniques de proxy anonyme avec SOCKS4/SOCKS5 au niveau de l'OS (3e couche de transport réseaux du modèle OSI)</li>
+            <li>Techniques de proxy anonyme avec SOCKS4/SOCKS5 au niveau du navigateur internet(firefox)</li>
+            <li>Héberger son propre serveur DNS et naviguer à partir D'IPs directement</li>
+            <li>Windows/system32/drivers, /etc/Hosts File IP DNS Lookup (Associer un nom d'hôte/nom de domaine avec n'importe quelle IP cachée, de manière permanente)</li>
+        </ul>
+    </p>  
+        <h4><u>L'utilisation de PuTTY</u></h4>
+        <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">L'utilisation de PuTTY</a>
+    <p>
+        <div class="dividerthree"></div>
+        Les connexions Internet normales, sans utiliser SSL, sont des textes en clair, avec des transmissions non chiffrées à l'intérieur des paquets de données. En utilisant un renifleur de paquet c'est possible de renifler des paquets et regarder leur contenu en texte clair (non chiffré). Ceci peut inclure les noms d'utilisateurs, mails, messages instantanés, et parfois même des mots de passe ou autres informations sensibles. Lorsque que vous mettez en place un tunnel sécurisé, vous vous connectez de manière sécurisé et chiffré à une machine, vous permettant d'éviter que certain des packets qui transittent depuis votre ordinateur ne soient reniflé, et donc éviter que quelqu'un lise vos informations.
+        Ça ne sert pas uniquement à maintenir votre connexion Internet sécurisée, cela permet également de cacher l'IP de chez vous. En utilisant ce tunnel pour vos transmissions, tout les packets que vous envoyez auront l'IP de la machine de transit en adresse de source du packet, au lieu de l'IP de chez vous.
+        Vous ne devez pas faire faire confiance à un VPN (SSH) gratuit. Il est dans votre intêret d'en utiliser un payant.
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>OpenVPN GNU/Linux</u></h4>
+        Des informations sur comment configurer un environnement GNU/Linux à utiliser openVPN peuvent être trouvées (openVPN sécurise uniquement les transfert entre votre serveur et votre ordinateur, et non entre votre serveur et internet. Votre serveur sera donc l'intermédiaire et peut être identifié, a moins d'utiliser d'autres techniques d'anonymat supplémentaires) <a href="https://openvpn.net/index.php/open-source/documentation/howto.html" target="_blank">ici</a>
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>Utiliser des proxys SOCKS4/5</u></h4>
+        Si vous souhaite utiliser un proxy SOCKS 4/5 avec le navigateur Firefox, suivez les instructions <a href="http://uniqueinternetservices.com/configure-proxy-for-firefox.html">ici:</a><br />
+    </p> 
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>Configurer les DNS</u></h4>
+        Cette section explique comment changer les serveur de noms (DNS) ,qui associent un nom de domaine à une IP, et qui sont parfois utilisé comme un moyen de vous tracer par votre fournisseur d'accès à internet, même si les les données son chiffrés via RSA ou via triple DES, la requêtes pour associer un nom de domaine à une IP est effectuée par quelqu'un (en l'occurence, votre fournisseur d'accès à internet, par défaut) ; il faut donc faire en sorte de faire cette requête vous même ou auprès de quelqu'un de confiance. Idéalement, les requêtes DNS devraient être chiffrées, si vous êtes super-paranoiaque, certain proxys offrent cette possibilité. Plus d'information sur le chiffrement des requêtes DNS.<a href="http://dnscurve.org/in-benefits.html">ici:</a> ?<br />
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>Modifier les nom d'hôtes sur Windows</u></h4>
+        Cette astuce de hacker est un bon moyen d'associer une IP permanente  à votre réseau social favoris tel que facebook twitter, etc. Si vous êtes interressé, vous trouverez plus d'information <a href="http://www.ehow.com/how_5225562_edit-windows-hosts-file.html" target="_blank">ici:</a><br />
+        Si vous voulez simplement, associer cannabis.com à 4.2.2.1, vous pouvez également faire comme l'entrée localhost 127.0.0.1 de votre panneau de configuration Windows. Ceci vous permettra de vous affranchir des requêtes vers un serveur de nom de domaine (DNS). (Vérifiez avec un renifleur de packet pour être sûr).
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>Renifler des packets</u></h4>
+        Les outils suivant requièrent l'installation des drivers PCap et sont inclus en téléchargement avec chacun des outils. Comprendre la composition des packets réseaux demande du temps et de la pratique. Pour commencer, installez <a href="https://www.wireshark.org/" target="_blank">Wireshark</a>, ou MS Network Monitor 3.4; les deux sont gratuits. Si vous ne voyez pas d'interface de capture des packets disponible dans la liste, vous devrez lancez l'outil en tant qu'administrateur. Afin d'identifier quelle interface choisir, cliquez sur le premier icon (en haut à gauche) "lister les interfaces disponibles" et chercher celle dont le nombre augmente. Démarrer-le et regardez les packets passer. Fermez les applications de stream et de téléchargment. Vous verrez ainsi des requêtes ARP et de traffic NetBios, occasionellement des requêtes UPnP ou autres. Si vous êtes connecté à un VPN sécurisé ou autre, vous ne verrez quasiment que des paquet SSL/TLS de couleur grise ou des paquet UDP de couleur bleue apparaitre. Vous pouvez essayer de changer l'interface d'écoute (une interface TAP par exemple, interfaces réseaux de VMs par exemple) et regarder les requêtes.
+        Allez sur votre réseau local et jouer avec les requêtes que vous apercevez: a quoi ressemble les handshakes DHCP, les requêtes et réponses DNS, parcourez un dossiers partagé et voyez ce qu'il se passe, etc.
+        Si vous savez comment faire, faites un scan nmap et voyez à quel point ça spam, et apprener a l'utiliser de manière moins criarde. Pour plus d'informations, lisez et regardez les vidéos: <a href="https://www.wireshark.org/docs/">ici</a>. Il y a beaucoup a savoir, mais une fois que vous y avez pris goût, ce n'est pas dur a comprendre.
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>TCPDump(linux) / WinDump(windows)</u></h4>
+        Utilitaire en ligne de commande de reniflage de packets qui permet de les stocker pour les analyser plus tard.
+    <p><a href="http://www.tcpdump.org/">Linux</a> et <a href="https://www.winpcap.org/windump/">Windows</a></p>
+    <p>
+         <a href="http://networkminer.sourceforge.net/)">Networkminer</a> est une une solution alternative qui permet de trier les paquets  (par nom d'hôte par exemple) pour simplifier l'apprentissage.
+    </p> 
+     <p>
+        <div class="dividerthree"></div>
+        <h4><u>Couches Réseaux & Modèle OSI</u></h4>
+        Afin d'entièrement comprendre le fonctionnement d'un logiciel ou d'un appareil, un expert de la sécurité doit être capable de comprendre les implications d'un changement de configuration. Peut importe ce que vous modifier sur une couche réseaux donné, ceci aura forcément un impact sur les autres couches. Par exemple: La couche de laison (couche 2 du modèle OSI) doit utiliser la couche physique (couche 1 du modèle OSI), et ainsi de suite.
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>Couche 1 du modèle OSI</u></h4>
+        Cette couche décrit les spécificités élecriques et physiques de l'appareil.
+        La couche 1 décrira en particuliers le voltages, les répéteurs, commutateurs, les adapteurs réseau, BUS et SANs (Storage Area Networks)
+        Les standards tell que RS-232C Com popularisé dans les années 90 utilise de tel câbles pour communiquer. Un exemple populaire de milieu qui utilise de tel câbles est internet étant donné que les modems de l'époque les utilisait pour s'entreconnecter.
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>Couche 2 du modèle OSI</u></h4>
+        La couche de liaison fournit les moyens fonctionnel et procéduraux de transferer des données entre plusieurs entités connectées via la couche physique (câbles/adapteurs/routeurs/répéteurs) et ainsi de suite.
+        <p>
+         Originellement, la couche 2 à été créée uniquement pour permettre des tranferts de point à point. LAN et le multi-broadcast (multicast) étaient développé indépendement du standard ISO (IEEE 802). WAN et LAN sont des services de la couche de liaison qui arrangent des bits depuis la couche physique vers des trames. voir <a href="https://fr.wikipedia.org/wiki/Trame(informatique)" target="_blank"><u>http://fr.wikipedia.org/wiki/Trame_(informatique)</u></a>
+         Ce trames contiennent des informations importantes relative au Transmission Control Protocol (TCP), et inclus des informations tel que votre addresse IP.
+        </p>
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4><u>Le Framework Metasploit</u></h4>
+        Metasploit est une suite de logiciel créér pour les tests d'intrusion, et est inclu dans Kali (anciennement BackTrack) et Gnacktrack liveCD dans la section solutions portables.
+        Il comporte un ligne de commande, une interface graphique, et une interface Web, créant ainsi, le premier logiciel de hacking point-and-click. Il comporte une base de donnée mise à jour en permanence d'exploits (failles de sécurité), que vous pouvez utiliser pour avoir acces à distance à des systèmes vulnérables <a href="https://dev.metasploit.com/redmine/projects/framework" target="_blank"><u>metasploit</u></a>
+    </p>
+    <p>
+        <div class="dividerthree"></div>
+        <h4>Pour conclure</h4>
+        Voilà, c'est la fin de ce document que vous avez très certainement lu en entier, n'est-ce pas?
+        Merci de poser vos questions sur #OpNewBlood.fr
+        Vous pouvez nous contacter via votre navigateur sur <a href="https://webchat.anonops.com/" target="_blank"><u>webchat</u></a> en citant ce document et surtout faites attention. Protéger votre vie privée et la partie la plus importante en faisant partie d'Anonymous
+    </p>
+    <p>Dans notre monde, une bonne défense constitue la meilleure attaque.</p>    
+    <div id="footer">
+            <!--Footer Begins -->
+            <h2 class="center"><a href="../index-2.html">Aller à la Page Principale</a></h2>
+	<div class="dividerthree"></div>
+            <p class="center">
+                <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/security.html" target="_blank">
+                    <img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" />
+                </a>
+            </p>
+        </div><!--Footer Ends -->
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/fr/securite.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:44:45 GMT -->
+</html>

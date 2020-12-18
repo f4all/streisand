@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/tor.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:43:59 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Tor - #OpNewblood</title>
+	<meta name="description" content="AnonOps Newblood Tor Information" />
+	<meta name="keywords" content="anonymous tor, tor, anonymous irc, torbrowser, tails, torproject, orbot, tor android" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/><br />
+<h1>Tor - information and related software</h1>
+</div>
+<div class="dividertwo"></div>
+
+<ul class="menu2">
+<li><a href="#tor" target="_self">Tor</a></li>
+<ul>
+<li><a href="#how" target="_self">How does Tor work?</a></li>
+<li><a href="#advdis" target="_self">Advantages and disadvantages</a></li>
+<li><a href="#anonops" target="_self">Tor and AnonOps</a></li>
+</ul>
+<li><a href="#tbb" target="_self">Tor Browser Bundle (TBB)</a></li>
+<li><a href="#tails" target="_self">TAILS</a></li>
+<li><a href="#orbot" target="_self">OrBot - Tor for Android</a></li>
+<li><a href="#conc" target="_self">Recap and Conclusion</a></li>
+</ul>
+
+<div class="dividertwo"></div>
+<img src="images/mask.png" alt="" class="center"/>
+<div class="dividerthree"></div>
+
+<a id="tor"></a>
+<h2>Tor</h2>
+<p>The Tor (The Onion Router) Network is a means of relaying your traffic to either an exit node (whereby your traffic then exits the network and into the open web) or to a hidden service/site maintained within the network itself.  The traffic is routed through an 'untrusted' relay circuit, whereby each relay node only knows the node before it and the node after, thus no complete list of nodes used to route your traffic can be enumerated. The network exhibits end-to-end encryption but only within itself: if your traffic is not encrypted in the first place, any person data-sniffing the exit node will be able to see where you are then going and what you are doing whilst there.</p>
+
+<div class="dividerthree"></div>
+
+<a id="how"></a>
+<h4>How does Tor work?</h4>
+<p>When Tor starts, it asks a tor directory server to supply a list to your tor software of nodes available. Tor then creates a circuit by choosing nodes from this list and creates encryption keys for each node of the route your traffic will take. As the word “onion” suggests, Tor then takes the data to be transmitted from your software and adds a layer of encryption for each node in the route. As your data travels down the route within the network, a layer is unwrapped by a node to reveal where the data should go next, with each node ony seeing the node before itself and the next node in the route. Thus, by the time the data reaches an exit node, there is no way to determine where the data first entered the Tor network and where the data originated geographically. After this, though, your data is out in what is called the “clearweb”, the internet outside of Tor-like services. As mentioned earlier, if you have not put in place secure methods for your data after Tor, i.e. using encrypted protocols such as SSL on 6697 for IRC, then your data can be sniffed by a 3rd party.</p>
+<p>Thus, it is VITAL that, as with VPNs, you use encrypted protocols for any log-ins that you do (alias email accounts, fake facebook accounts etc) and DO NOT visit sites nor use accounts that are personally identifiable, nor re-use account names you have used outside of TOR or your VPN. More info/documentation (vital reading) can be found on the <a href="https://www.torproject.org/">Tor website.</a></p>
+
+<div class="dividerthree"></div>
+
+<a id="advdis"></a>
+<h4>Advantages and disadvantages</h4>
+<p>Tor provides anonymity – that is Tor's job. When using Tor, as opposed to a VPN, you are not trusting a company that could be logging your information when they say they aren't. Tor's methodology means that each server your traffic passes through cannot see your data. An exit node could sniff your data, but if you have used tor correctly with other principles of security (encryptions, sensible behaviour as advised above) then the data they may sniff is useless to them!  Another big positive is that Tor can now be downloaded and used in a much more user-friendly package (Tor Browser Bundle, see below) that takes a good deal of early setup configuration worry away from the end user. For users in countries where methods such as Tor are frowned upon, there exist multiple ways, known as "pluggable transports", to disguise Tor traffic as output from other software (see <a href="https://www.torproject.org/docs/pluggable-transports.html.en">here</a> for more information on pluggable transports).</p>
+<p>However, Tor does have its limitations, something that the creators and developers keenly stress so that users are aware and act accordingly. Some methods and features needed to use Tor on specific devices are still experimental (indicated on the site where appropriate). Tor also requires more awareness and effort to be used safely, which usually means compromising the user experience for security more so than other forms of securing your data and traffic. This leads users, at times, to disable features or install/use features and programs that they want, when they shouldn't as they may open up holes in security. Tor users can also experience, sometimes significantly, slower internet speeds due to server lags in the network, but this historically has slowly improved over time and continues to do so.</p>
+
+<div class="dividerthree"></div>
+
+<a id="anonops"></a>
+<h4>Tor and AnonOps</h4>
+<p>The AnonOps IRC Network does allow access through a Tor hidden service leaf server which users have to be manually added to by network administrators, but only after prerequisites are met by a user. Simply connecting to a standard server or via the webchat to the IRC network will result in an error message and a failed connection. In order to be added to the Tor leaf, network administrators ask that a user register a nick and actively use the nick for a minimum of three days to show a genuine interest in using the network fairly. The user is also asked to develop a basic knowledge and usage commands needed for IRC networks which includes learning the connecting user's identification string in the format nick!ident@host and understanding what each part means. When, and only when, these prerequisites are met, a user can join the #help channel to request tor leaf access. Admins in this channel will briefly assess you; if they feel you cannot adequately complete the setup process due to a lack of knowledge then you will not be added. Unlike help given for other topics, setup and configuration of IRC clients to work correctly with Tor is considered a more advanced subject and it is therefore up to the user to self-educate in these matters as step-by-step help will generally not be given.</p>
+
+<a id="tbb"></a><br></a>
+<h3>Tor Browser Bundle (TBB)</h3>
+<p>Relatively recently, a complete package has been created that includes Firefox with built-in Tor components. It also includes useful plug-ins that primarily increase your privacy around the net. TBB runs as a standalone instance, running from the folder it is extracted to, which therefore allows it to be portable (and contained on USB for instant use anywhere). For more information on TBB, which (along with standard Tor usage documentation) is deemed as ESSENTIAL READING for any user, you should visit the <a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser Bundle</a> page.</p>
+<div class="dividerthree"></div>
+
+<a id="tails"></a>
+<h3>TAILS</h3>
+<p>Tails is a complete linux distribution with anonymity and privacy in mind, using a Tor-only internet connection, methods to inhibit digital forensics techniques and methods to secure a user's data with strong cryptography. It was created for use as a portable USB/Live CD operating system and is not intended for a hard disk install.  For a more in-depth explanation, visit the <a href="https://tails.boum.org/">TAILS website.</a></p>
+
+<div class="dividerthree"></div>
+
+<a id="orbot"></a>
+<h3>OrBot - Tor for Android</h3>
+<p>Orbot is a TOR implementation for Android devices, from routing single apps to all traffic through the Tor network (excluding non-VoIP phone calls).  Some apps are recommended for use with Orbot, such as Orweb (internet browser) and ChatSecure (Instant Messaging). More info <a href="https://guardianproject.info/apps/orbot/">here.</a></p>
+<div class="dividerthree"></div>
+
+<a id="conc"></a>
+<h2>Recap and Conclusion</h2>
+<ul>
+<li>Tor offers anonymity, but on its own it does not offer privacy.</li><br>
+<li>Tor Browser Bundle is an easy way to start using Tor (pre-configured).</li><br>
+<li>Setting Tor up outside of Tor Browser Bundle correctly requires a user to self-educate significantly so as not to allow security holes.</li><br>
+<li>Tor use demands strict and sensible behaviour (using encrypted protocols, a user must not mix accounts inside and outside of tor etc) and the user experience can be lessened due to the usage requirements.</li><br>
+<li>Some plugins and features available for Tor are experimental.</li>
+</ul>
+<p>In summary, Tor can be a great tool if used properly. As the size of the tor network grows, its stability and network redundancy increases, mostly thanks to the ever-increasing number of vounteers and their servers. However, as with all security principles, it is better to use Tor within a model of security that a user develops along with other methods to ensure their safety and anonymity online. Remember that 1) Nothing is 100% secure as new vulnerabilities can be found with any software and 2) it is therefore up to the end user to ensure their own security; the more effort you put in to researching methods, the better your data security is likely to be.</p>
+
+<div class="dividerthree"></div>
+
+<h3>Good Luck!</h3>
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+<div class="dividerthree"></div>
+	<div id="footer"><!--Footer Begins -->
+	<h2 class="center"><a href="index-2.html">Back to the OpNewblood main page</a></h2>
+	<div class="dividerthree"></div>
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/vpn.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/tor.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:43:59 GMT -->
+</html> 

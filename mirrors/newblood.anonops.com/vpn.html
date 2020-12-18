@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from newblood.anonops.com/vpn.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:43:58 GMT -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>VPNs</title>
+	<meta name="description" content="AnonOps Newblood VPN Information" />
+	<meta name="keywords" content="anonymous vpn, vpn, anonymous irc, openvpn, openssl, providers, best vpn" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+   </head>
+
+<body>
+<div id="main"><!--Main Container Begins -->
+<div class="center">
+<img src="images/big.png" alt="" width="563" height="570"/><br />
+<h1>Virtual Private Networks - VPN</h1>
+</div>
+<div class="dividertwo"></div>
+
+<ul class="menu2">
+<li><a href="#intro" target="_self">Introduction</a>
+<ul>
+<li><a href="#pptp" target="_self">PPTP</a></li>
+<li><a href="#l2tp" target="_self">L2TP and L2TP/IPsec</a></li>
+<li><a href="#ovpn" target="_self">OpenVPN</a></li>
+<li><a href="#sstp" target="_self">SSTP</a></li>
+<li><a href="#conc" target="_self">Conclusions</a></li>
+</ul></li>
+<li><a href="#use" target="_self">Using a VPN</a></li>
+<li><a href="#list" target="_self">VPN Providers</a></li>
+</ul>
+<div class="dividertwo"></div>
+
+<h2>Introduction<a id="intro"></a></h2>
+VPNs are your overall best choice for anonymizing yourself on the internet. It's fairly easy to setup, there are wide variety and selection of providers from countries across the world. Basically, VPNs are private networks utilized for plenty of privatizing purposes but for our purposes, you will connect to the internet through your chosen VPN's server(s) and to the rest of the world your IP address and internet identity will be from the server's location. Some adjustments to your settings may be required as some websites use GeoIP to determine languages, currency units, time zones, etc.<br />
+VPN providers usually offer a choice of connection types, sometimes as part of different price plans, and sometimes all included in a single-price package. This guide is intended to provide an overview of the options available and to help you understand the basics of the underlying technologies used.<br />
+<div class="dividerthree"></div>
+
+<h3>A note about encryption key length</h3>
+<p>In crude terms, the length of a key used when making a cypher determines how long it will take to crack using a brute force attack, with longer keys requiring exponentially more time than shorter ones (a brute force attack is also known an exhaustive key search and involves trying every possible combination until the correct one is found).</p>
+<p>It is almost impossible to find VPN of less than 128-bit key length, and it is increasingly common to find 256-bit encryption on offer, sometimes going up to 2048-bit. SSTP uses 2048-bit encryption as standard for example. But what do these numbers mean in practice, and is 256-bit encryption really more secure than 128-bit encryption?</p>
+<p>The short answer is that to all practical intents and purposes, no. While it is true that a 256-bit key would require 2<sup>128 </sup>times more computational power to break than a 128-bit key, that still means 3.4 x10<sup>38</sup> operations would be required (the number of combinations in a 128-bit key) – a feat beyond conventional computing techniques for the foreseeable future. It would currently take the fastest supercomputer (figures from 2011, capable of 10.51 pentaflops peak speed) 1.02 x 10<sup>18 </sup>(around 1 billion) years to crack a 128-bit AES key by force.</p>
+<p>As a 128-bit cypher cannot in any practical terms be cracked (through brute strength), it is fair to say that this more than strong enough for most purposes. Only those truly paranoid about security (such as governments when handling ultra-sensitive classified data that needs to remain secret for the next 100 years or so) may have a practical use for 256-bit encryption (the United States government for example uses <a href="http://en.wikipedia.org/wiki/NIST">NIST</a> certified 256-bit AES encryption).</p>
+<p>So why is it increasingly common to see VPN providers offering 256-bit encryption (let alone 2048-bit encryption)? Particularly when you consider that it takes computers considerably longer to encrypt information with 256-bit or greater keys? The simple answer is marketing. It sounds more impressive when trying to sell a product.</p>
+<p>Large corporations and governments may feel the need for the added security margin afforded by longer key lengths, but for the average home VPN user 128-bits is more than sufficient.</p>
+<p>Different cyphers do have vulnerabilities which may allow for faster key deduction, and sideways attacks using software such as key loggers can be used to get around encryption. However the point stands that when it comes to key length, sizes over 128-bits really are unlikely to matter for most users.</p>
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+<div class="dividerthree"></div>
+
+<h2>PPTP<a id="pptp"></a></h2>
+<p>Point-to-Point Tunnelling Protocol is a Microsoft invention for creating VPN over dialup networks, and as such has long been the standard protocol for internal business VPN for many years. It is a VPN protocol only, and relies on various authentication methods to provide security (with <a href="http://en.wikipedia.org/wiki/MS-CHAP">MS-CHAP v2</a> being the most common). Available as standard on just about every VPN capable platform and device, and thus being easy to set up without the need to install additional software, it remains a popular choice both for businesses and VPN providers. It also has the advantage of requiring a low computational overhead to implement (i.e. it’s quick).</p>
+<p>However, although now usually only found using 128-bit encryption keys, in the years since it was first bundled with Windows95 OSR2 in 1999 a number of security vulnerabilities have come to light, the most serious of which is the possibility of unencapsulated MS-CHAP v2 Authentication. Using this exploit, PPTP has been cracked within 2 days, and although Microsoft has patched the flaw (through the use of <a href="http://en.wikipedia.org/wiki/Protected_Extensible_Authentication_Protocol">PEAP</a> rather than MS-CHAP v2 authentication), it has itself <a href="http://technet.microsoft.com/en-us/security/advisory/2743314">issued a recommendation</a> that VPN users should use L2TP, IPsec or SSTP instead.</p>
+<div class="dividerthree"></div>
+
+<h4>Pros</h4>
+<ul>
+<li>Client built-in to just about all platforms</li>
+<li>Very easy to set up</li>
+<li>Fast</li>
+</ul>
+
+<h4>Cons</h4>
+<ul>
+<li>Not very secure (the vulnerable MS CHAPv2 authentication is still the most common in use)</li>
+</ul>
+
+<h2>L2TP and L2TP/IPsec<a id="l2tp"></a></h2>
+
+<p>Layer 2 Tunnel Protocol is a VPN protocol that on its own does not provide any encryption or confidentiality to traffic that passes through it. For this reason it is usually implemented with the IPsec encryption protocol to provide security and privacy.</p>
+<p>L2TP/IP sec is built-in to all modern operating systems and VPN capable devices, and is just as easy and quick to set up as PPTP (in fact it usually uses the same client). Problems can arise however because the L2TP protocol uses UDP port 500, which is more easily blocked by NAT firewalls, and may therefore require advanced configuration (port forwarding) when used behind a firewall (this unlike SSL which can use TCP port 443 to make it indistinguishable from normal SHTTP traffic).</p>
+<p>IPsec encryption has no major vulnerabilities and is considered extremely secure when using a secure algorithm such as AES. However, because it encapsulates data twice, it is not as efficient as SSL based solutions (such as OpenVPN and SSTP) and is therefore slightly slower.</p>
+<div class="dividerthree"></div>
+<h4>Pros</h4>
+<ul>
+<li>Very secure</li>
+<li>Easy to set up</li>
+<li>Available on all modern platforms</li>
+</ul>
+
+<h4>Cons</h4>
+<ul>
+<li>Slower than OpenVPN</li>
+<li>Can struggle with restrictive firewalls</li>
+</ul>
+
+<h2>OpenVPN<a id="ovpn"></a></h2>
+
+<p>OpenVPN is a fairly new <a href="http://en.wikipedia.org/wiki/Open_source">open source</a> technology that uses the <a title="OpenSSL" href="http://en.wikipedia.org/wiki/OpenSSL">OpenSSL</a> library and <a title="Transport Layer Security" href="http://en.wikipedia.org/wiki/Transport_Layer_Security">SSLv3/TLSv1</a> protocols, along with an amalgam of other technologies, to provide a strong and reliable VPN solution.  One of its major strengths is that it is highly configurable, and although it runs best on a UDP port, it can be set to run on any port, including TCP port 443. This makes it traffic on it impossible to tell apart from traffic using standard HHTP over SSL (as used by for example Gmail), and it is therefore extremely difficult to block.</p>
+<p>Another advantage of OpenVPN is that the OpenSSL library used to provide encryption supports a number of cryptographic algorithms (e.g. AES, Blowfish, 3DES,  CAST-128, Camellia and more), with most common algorithms seen in use by VPN providers being AES and Blowfish. AES is the newer technology, and although both are considered secure, the fact that it has a 128-bit block size rather than Blowfish’s 64-bit block size means that it can handle larger (over 1 GB) files better.  The differences are however pretty minor. How fast OpenVPN performs depends on the level of encryption employed, but it is generally faster than IPsec.</p>
+<p>OpenVPN has become the default VPN connection type, and while natively supported by no platform, is widely supported on most through third party software. Until very recently it was impossible to run OpenVPN on non jailbroken/ rooted iOS and Android portable devices, although third party apps have now appeared to at least partially address this problem*.</p>
+<p>This relates to another problem with OpenVPN; that its flexibility can make it a bit fiddly to set up. When using generic OpenVPN software in particular (such as the standard open source OpenVPN client for Windows), it is necessary to not only download and install the client, but also to download and setup additional configuration files. Many VPN providers get around this configuration problem by supplying customized VPN clients.</p>
+<div class="dividerthree"></div>
+<h4>Pros</h4>
+<ul>
+<li>Highly configurable</li>
+<li>Very secure (technically depends on encryption algorithm but all are very strong)</li>
+<li>Can bypass firewalls</li>
+<li>Can use a wide range of encryption algorithms</li>
+</ul>
+
+<h4>Cons</h4>
+<ul>
+<li>Needs third party software</li>
+<li>Can be difficult to set up</li>
+<li>Limited support on portable devices</li>
+</ul>
+<p>*<a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn&amp;feature=search_result#?t=W251bGwsMSwyLDEsImRlLmJsaW5rdC5vcGVudnBuIl0.">OpenVPN for Android</a> and Open Connect for <a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981">iOS</a> and <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn&amp;feature=search_result">Android</a> provide third party OpenVPN support on iOs and Android (4.0 or higher only) devices. These solutions still require a similar downloading and setting up process to the open source desktop OpenVPN clients. Note also that most VPN providers do not offer any support for setting up OpenVPN on mobile devices (although this is changing). The only custom OpenVPN client for mobile devices we have yet to come across is the <a href="https://play.google.com/store/apps/details?id=kepard.client&amp;feature=search_result#?t=W251bGwsMSwyLDEsImtlcGFyZC5jbGllbnQiXQ..">Kepard</a> app for Android (all versions).</p>
+<div class="dividerthree"></div>
+
+<h2>SSTP<a id="sstp"></a></h2>
+<p>Secure Socket Tunneling Protocol was introduced by Microsoft in Windows Vista SP1, and although it is now available for Linux, RouterOS and SEIL, it is still largely a Windows only platform (and there is a snowball’s chance in hell of it ever appearing on an Apple device!). SSTP uses SSL v3, and therefore offers similar advantages to OpenVPN (such as the ability to use to TCP port 443 to avoid NAT firewall issues), and because it is integrated into Windows may be easier to use and more stable.</p>
+<div class="dividerthree"></div>
+<h4>Pros</h4>
+<ul>
+<li>Very secure  (depends on algorithm usually very strong AES)</li>
+<li>Completely integrated into  Windows (Windows Vista SP1, Windows 7, Windows )</li>
+<li>Microsoft support</li>
+<li>Can bypass most firewalls</li>
+</ul>
+
+<h4>Cons</h4>
+<ul>
+<li>Only really works in a Windows only environment</li>
+</ul>
+
+<h2>Conclusion<a id="conc"></a></h2>
+<ul>
+<li><b>PPTP</b> is too insecure (even its creator Microsoft has abandoned it) and should therefore be avoided. While its ease of setup and cross platform compatibility are attractive, L2PT/IPsec has the same advantages and is much more secure</li>
+<li><b>L2TP/IPsec</b> is a good VPN solution, but is not quite as good as OpenVPN. However, for a quick VPN setup without the need to install extra software it remains useful, particularly for mobile devices where OpenVPN support is still very patchy</li>
+<li><b>OpenVPN </b>is the best all round VPN solution despite needing third party software on all platforms. It is reliable, fast and secure, although it usually needs a bit more setting up than the other protocols</li>
+<li><b>SSTP </b>offers most of the advantages of OpenVPN but only in a Windows environment. This does mean that it is better integrated into the OS, but it is poorly supported by VPN providers thanks to this limitation.</li>
+</ul>
+<p>Most users should therefore go with using OpenVPN on their desktop computers, perhaps supplementing it with L2TP/IPsec on their mobile devices.</p>
+<div class="dividerthree"></div>
+<img src="images/mask.png" alt="" class="center"/>
+<div class="dividerthree"></div>
+
+<h2>Using VPNs<a id="use"></a></h2>
+<p><strong><em>WARNING<br />
+If you don't have to pay for a product, you are the product being sold.</em></strong></p>
+Free VPNs are available online, but we strongly recommend you do not go this route. They could be logging your IP address or browser information and selling it to advertising companies and are inherently more likely to bend easily and immediately under any kind of legal pressure. Before you use a free VPN you might as well look in the <a href="security.html" target="_blank">Security Handbook</a> for other options you could take to anonymize yourself.<br />
+<div class="dividerthree"></div>
+<p><strong>To learn more about how VPNs protect your privacy, please see this frequently updated survey about how customer data is handled by various providers.<a href="https://torrentfreak.com/vpn-services-that-take-your-anonymity-seriously-2013-edition/"> https://torrentfreak.com/vpn-services-that-take-your-anonymity-seriously-2013-edition/</a></strong></p>
+<div class="dividerthree"></div>
+<h3>VPN Providers<a id="list"></a></h3>
+<p>Following is a list of paid VPN providers. A VPN is a Internet Connection that creates an encrypted tunnel through your ISP and masks your real IP address. Payment methods vary widely with some requiring a PayPal account, verifiable personal information whereas others allow the use of bitcoin and prepaid credit cards to ensure higher levels of anonymity.<br />
+It is advised that you carefully read the Terms of Service and Privacy Policies for any provider you are considering. Laws vary from country to country and what may be legal in one, is not in another so you need to make your decision based on your own situation. Contact the provider and ask them if you are in doubt.</p>
+<div class="dividerthree"></div>
+<p>The following list was gathered from simple web searches and is not an endorsement for their use. Any recommendations are based on actual/anecdotal experience. Please read the Terms of Service and the Privacy policy of any you are considering using. Join #opnewblood for help with VPNs.</p>
+<div class="dividerthree"></div>
+  <a href="https://www.vpntunnel.se/en/">https://www.vpntunnel.se/en/</a> prepaid cards, paypal<br />
+  <a href="http://www.ibvpn.com/">https://www.ibvpn.com/</a> - many services, many payment options, allows torrents.<br />
+  <a href="https://airvpn.org/">https://airvpn.org/</a> - A VPN based on OpenVPN and (purportedly) operated by activists and hacktivists in defence of net neutrality, privacy and against censorship. Accepts Bitcoin.<br />
+  <a href="https://www.relakks.com/">https://www.relakks.com</a> - Based in Sweden and launched in co-operation with the Swedish Pirate Party in 2006. Very affordable.<br />
+  <a href="https://perfect-privacy.com/">https://perfect-privacy.com</a> - Accepts Bitcoin.<br />
+  <a href="https://www.ipredator.se/">https://www.ipredator.se</a> - keeps some logs but state they encrypt them.<br />
+  <a href="https://www.swissvpn.net/">https://www.swissvpn.net</a> - 6 CHF/month keeps some logs.<br />
+  <a href="https://www.steganos.com/">https://www.steganos.com</a> - They have some interesting security tools and seem very commited to protecting privacy.<br />
+  <a href="https://www.bananavpn.net/">https://www.bananavpn.net</a> > logs IPs, does not allow P2P (torrents).<br />
+  <a href="https://www.strongvpn.com/">https://www.strongvpn.com</a> > logs IPs<br />
+  <a href="https://www.vpngates.com/">https://www.vpngates.com</a><br />
+  <a href="https://www.trilightzone.org/">https://www.trilightzone.org</a> - VPN, secure shells, and many other services - Accepts Bitcoin, cash, Litecoin, and other common payment types.<br />
+  <a href="https://www.vpnaccounts.com/">https://www.vpnaccounts.com</a><br />
+  <a href="https://www.securstar.de/">https://www.securstar.de</a><br />
+  <a href="https://www.witopia.net/">https://www.witopia.net</a><br />
+  <a href="https://www.tiggerswelt.net/">https://www.tiggerswelt.net</a><br />
+  <a href="https://anonine.com/en">https://anonine.com/en</a> - Anonine has changed hands several times and the current, true owner is unclear. Therefore <strong>Anonine is no longer recommended at this time.</strong>
+<div class="dividertwo"></div>
+ 
+	<div id="footer"><!--Footer Begins -->
+	<h2 class="center"><a href="index-2.html">Back to the OpNewblood main page</a></h2>
+	<div class="dividerthree"></div>
+<p class="center"> 
+    <a href="http://validator.w3.org/check?uri=https://newblood.anonops.com/vpn.html" target="_blank">
+	<img src="images/html5-valid.gif" alt="Valid XHTML 1.0 Transitional" height="24" width="103" /></a>
+</p>
+	</div><!--Footer Ends -->
+
+</div><!--Main Container Ends -->
+</body>
+
+<!-- Mirrored from newblood.anonops.com/vpn.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Feb 2015 03:43:59 GMT -->
+</html>
