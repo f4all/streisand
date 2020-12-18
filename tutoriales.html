@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <link rel="stylesheet" type="text/css" href="./design/global.css" media="all" />
+<link rel="shortcut icon" type="image/x-icon"   href="https://freed0m4all.net/img/logo.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="fr" />
+  <title>Streisand me !</title>
+  <meta name="description" content="" />
+</head>
+
+<body>
+<div id="wrapper">
+  <h1>Streisand project.</h1>
+  <ul id="nav">
+    <li><a href="#" class="current">Home</a></li>
+    <li><a href="https://chat.freed0m4all.net">Chat (IRC)</a></li>
+  </ul>
+
+  <div id="content">
+    <p id="languages"> 
+     <strong>Translations :</strong><a href="indexen.html"><acronym title="english">english</acronym></a>,<a href="index.html"><acronym title="spanish">español</acronym></a>, <a href="indexbr.html">português</a><acronym title="spanish">|</acronym><a href="ayuda.html"><acronym title="spanish">Help translate.</acronym></a></p>
+   <div id="aside">
+  <p><img src="./design/streisandpuppets.jpg" alt="" width="252px" /></p>
+
+      <p id="download">
+        <a href="source.tar.gz">
+          <span>Descarga este website.</span><br/>
+        source.tar.gz</a>
+      </p>
+<h2>Archivo y Ops</h2>
+<ul>
+        <li><a href="https://s1-streisand.freed0m4all.net/tuto4pc.htm" class="external">Censura por Tuto4pc</a></li>
+        <li><a href="https://piratenpad.de/wikileaks" class="external">Wikileaks Mirror Project</a></li>
+        <li><a href="https://s1-streisand.freed0m4all.net/telecomix.org/" class="external">Telecomix.org</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/datalove.me/" class="external">Datalove.me</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/broadcast.telecomix.org/" class="external">Broadcast.telecomix.org 2012</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/bluecabinet.info/" class="external">Bluecabinet.info</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/bloubator/" class="external">Bloubator</a></li>
+<li><a href="https://cryptoanarchy.freed0m4all.net" class="external">cryptoanarchy.org</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/interfax.telecomix.org/" class="external">interfax.telecomix.org</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/energia-libre.info/" class="external">energia-libre.info</a></li>
+      </ul>
+
+   </div>
+<div id="main">
+  <h2>Introduccion</h2>
+  <p>Para mantener la ejecucion del flujo de la información, y para esquivar la censura, aquí hay algunas pautas sobre cómo configurar una réplica (mirror) de algunos archivos y documentos que el mundo necesita conocer.</p>
+  <p><strong>Asi es como funciona la censura en internet:</strong> El gobierno se entera de un sitio, luego lo añade a un filterlist (lista negra). Ahora, esto es, por supuesto, muy fácil de eludir. Usted acaba de mover el sitio a un nuevo número IP o cambia la dirección URL de la misma. Para estar un paso por delante de los censores, se utiliza el famoso Efecto Streisand para solucionar el problema. El efecto Streisand estipula que entre más se trata de censurar contenidos en Internet, más seran copiados. Funciona para los 2000 espejos de Wikileaks, y funciona para casi cualquier proyecto. Hay tal vez 2 mil millones de computadoras en el mundo para elegir, ya que ellas pueden ser un espejo también.</p>
+ 
+
+
+  <h2>Manos a la obra!</h2>
+  <ol>
+    <li>
+      <p>Lo primero que necesita, una conexión a Internet. Aun una coneccion bastante mala lograra su proposito, y una conexión de casa es suficiente teniendo en cuenta que hay un montón de ellas.</p>
+    </li>
+    <li>En segundo lugar se necesita un servidor web. En Linux tienes el excelente servidor Apache, que en Debian / Ubuntu está instalado y puesto en marcha con el comando sudo apt-get install apache2. En la mayoría de las versiones de Mac OS ya está instalado, y puedes activarlo en las preferencias de red / compartir. En Windows, no estoy seguro de cómo hacer esto (fuck window$).</li>
+    <li>
+      <p>Reenviar los puertos en tu router si tienes uno. Lo que buscas es lograr enviar el puerto 80 de tu router a la IP y puerto de tu webserver casero.</p>
+    </li>
+    <li>Revisa el servidor web para ver que funciona. En primer lugar, simplemente escriba https://localhost en el navegador, y deberias ver una página diciendo &quot;Apache se ha establecido con éxito&quot; o similar. A continuación, intenta acceder a él desde Internet, para ver si funciona la redirección de puertos.</li>
+    <li>Copie los archivos del mirror y descomprimirlo en el directorio que Apache apunta. En Linux por lo general los puntos predeterminados en / var / www donde usted puede poner los archivos. En un Mac, es en algún lugar de la carpeta de inicio (si no recuerdo mal). Por favor poner el archivo zip original en el directorio, por lo que los demás puedan copiar su espejo. Efecto Streisand es recursiva, ya sabe, como un fractal.</li>
+    <li>
+      <p>Una vez que los archivos, incluyendo el index.*, se encuentra en ese directorio específico, el espejo debe trabajar para impulsar el tráfico en la interwebs. Pregunte a sus amigos para que lo pruebe. Si no funciona, consulta en nuestra querida interwebs.</p>
+    </li>
+    <li><strong>Felicitaciones.</strong> Has participado en la maquinaria de la política de Internet y contribuiste a la imposibilidad de la censura del los gobiernos.</li>
+    <li>
+      <p>Añade tu ubicación con nosotros al anunciarla en nuestros canales de chat. También, siéntete libre de hablar con los internautas en el el canal <strong>#streisand</strong> en <strong>irc.freed0m4all.net</strong>.</p></li>
+  </ol>
+<p id="footer">Created  by <a href="https://telecomix.org/">Telecomix</a> and hosted by <a href="https://freed0m4all.net">Freed0m4All</a>.<br/>
+  No copyright, no license.<br />
+  <img name="" src="design/logo.png" width="30" height="30" alt="" /> <img src="design/telecomix.gif" width="30px" alt="Telecomix" /></p>
+</div>
+</div>
+</body>
+</html>

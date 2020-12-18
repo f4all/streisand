@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <link rel="stylesheet" type="text/css" href="./design/global.css" media="all" />
+<link rel="shortcut icon" type="image/x-icon"   href="https://freed0m4all.net/img/logo.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="fr" />
+  <title>Streisand me !</title>
+  <meta name="description" content="" />
+</head>
+
+<body>
+<div id="wrapper">
+  <h1>Streisand project.</h1>
+  <ul id="nav">
+    <li><a href="#" class="current">Home</a></li>
+    <li><a href="https://chat.freed0m4all.net">Chat (IRC)</a></li>
+  </ul>
+
+  <div id="content">
+    <p id="languages"> 
+     <strong>Translations :</strong><a href="indexen.html"><acronym title="english">english</acronym></a>,<a href="index.html"><acronym title="spanish">español</acronym></a>, <a href="indexbr.html">português</a><acronym title="spanish">|</acronym><a href="help.html"><acronym title="spanish">Help translate.</acronym></a></p>
+   <div id="aside">
+  <p><img src="./design/streisandpuppets.jpg" alt="" width="252px" /></p>
+
+      <p id="download">
+        <a href="source.tar.gz">
+          <span>Download this website.</span><br/>
+        source.tar.gz</a>
+      </p>
+<h2>Archive and Ops</h2>
+<ul>
+        <li><a href="https://s1-streisand.freed0m4all.net/tuto4pc.htm" class="external">Censura por Tuto4pc</a></li>
+        <li><a href="https://piratenpad.de/wikileaks" class="external">Wikileaks Mirror Project</a></li>
+        <li><a href="https://s1-streisand.freed0m4all.net/telecomix.org/" class="external">Telecomix.org</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/datalove.me/" class="external">Datalove.me</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/broadcast.telecomix.org/" class="external">Broadcast.telecomix.org 2012</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/bluecabinet.info/" class="external">Bluecabinet.info</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/bloubator/" class="external">Bloubator</a></li>
+<li><a href="https://cryptoanarchy.freed0m4all.net" class="external">cryptoanarchy.org</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/interfax.telecomix.org/" class="external">interfax.telecomix.org</a></li>
+<li><a href="https://s1-streisand.freed0m4all.net/energia-libre.info/" class="external">energia-libre.info</a></li>
+      </ul>
+
+   </div>
+<div id="main">
+  <h2>Introduction</h2>
+  <p>To keep the flow of information running, and to route around  censorship, here are some guidelines on how to set up a mirror of a few  videos that the world needs to know about.</p>
+  <p><strong>This is how censorship on the web works:</strong> The government finds out  about a site, then adds it to a filterlist. Now, this is of course very easy to circumvent. You just move the  site to a new IP-number or change the URL to it. To be one step ahead of  the censors, we use the famous Streisand Effect  to work around the problem. The Streisand effect stipulates that the  more someone tries to censor content on the internet, the more it is  copied. It works for the 2000 Wikileaks mirrors, and it works for almost  any project. There are maybe 2 billion computers in the world to choose  from, because you can be a mirror too.</p>
+ 
+
+
+  <h2>Lets do it!</h2>
+  <ol>
+    <li><p>First you need an internet connection. A pretty lousy one will  actually do, and a home connection is sufficient given that there are  lots of them.</p></li>
+    <li><p>Second you need a web server. On Linux you have the excellent  Apache server, which on Debian/Ubuntu is installed and started up with  the command <span class="code">sudo apt-get install</span> apache2. On most Mac  OS versions it is already installed, and you activate it in the  preferences for network/sharing. On Windows, I am not sure how to do  this (please comment!).</p></li>
+    <li><p>Forward ports in your home router if you have one. You want port 80 to go to the local IP-number of your web server.</p></li>
+    <li><p>est the web server to see that it functions. First you simply type <span class="code">https://localhost</span> in your browser, and you should see a page saying “Apache has been set  up successfully” or similar. Then try to access it from the internet, to  see if your port forwarding works.</p></li>
+    <li><p>Copy the mirror files  and unzip them in the directory that Apache points to. On Linux it  usually default points to <span class="code">/var/www</span> where you can put the files. On a  Mac, it is somewhere in your home folder (if I remember correctly).  Please also put the original zip file in the directory, so that others  can copy your mirror. Streisand effect is recursive, you know, just like  a fractal.</p></li>
+    <li><p>Once the files, including the <span class="code">index.html</span>, is in that specific  directory, the mirror should work to push traffic on the interwebs. Ask  your friends to try it out. If it does not work, consult an Apache  manual.</p></li>
+    <li><p><strong>Congratulations.</strong> You have participated in the machinery of  internet politics and contributed to the impossibility of government  censorship.</p></li>
+    <li>
+      <p>Add your location to us by announcing it in our chat channels. Also, feel free to discuss with internauts in the <strong>#streisand</strong> on <strong>irc.freed0m4all.net</strong>.</p></li>
+  </ol>
+<p id="footer">Created  by <a href="https://telecomix.org/">Telecomix</a> and hosted by <a href="https://freed0m4all.net">Freed0m4All</a>.<br/>
+  No copyright, no license.<br />
+  <img name="" src="design/logo.png" width="30" height="30" alt="" /> <img src="design/telecomix.gif" width="30px" alt="Telecomix" /></p>
+</div>
+</div>
+</body>
+</html>
